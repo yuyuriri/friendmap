@@ -30,8 +30,6 @@ class TopmenuViewController: UIViewController, UICollectionViewDataSource, UICol
     //
     //    }
     
-    @IBOutlet var newroomButton: UIButton!
-    
     //一番最初だけ呼び出し
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -170,27 +168,30 @@ class TopmenuViewController: UIViewController, UICollectionViewDataSource, UICol
     
     
     //(セル選択時の処理)
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print("\(indexPath.row)番目の行が選択されました。")
         
-//        selectedCupon = couponArray[indexPath.row]
-        
-        performSegue(withIdentifier: "goDetail", sender: nil)
-        
+        //indexPath.row : 何番目のセルか
+        if indexPath.row == 0 {
+            //指定の遷移先に遷移する（最低限の処理）
+            performSegue(withIdentifier: "newroom", sender: indexPath.row)
+            
+        }else {
+
+            //指定の遷移先に遷移する（最低限の処理）
+                    performSegue(withIdentifier: "godetail", sender: indexPath.row)
+
+        }
+//
 //        UICollectionView.deselectRow(at: indexPath, animated: true)
 // 別の画面に遷移
 //        performSegue(withIdentifier: "MainroomViewController", sender: nil)
-            
         
-        //指定の遷移先に遷移する（最低限の処理）
+//指定の遷移先に遷移する（最低限の処理）
 //        performSegue(withIdentifier: "godetail", sender: indexPath.row)
         
     }
-    
-    // collectionViewのセルをタップした時に呼ばれるメソッド
-//
-    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "godetail" {
