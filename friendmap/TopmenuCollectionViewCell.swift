@@ -39,8 +39,10 @@ class TopmenuCollectionViewCell: UICollectionViewCell {
         mainImageView.image = UIImage(data: mainImageData)
         
         //角丸にする
-        self.layer.cornerRadius = 8
+        self.layer.cornerRadius = 15
         self.layer.masksToBounds = true
+        //透明度
+        self.backgroundColor = UIColor(white: 1, alpha: 0.8)
     }
     
     override var isHighlighted: Bool {
