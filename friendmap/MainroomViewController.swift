@@ -7,8 +7,11 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
-class MainroomViewController: UIViewController {
+class MainroomViewController: UIViewController, UISearchResultsUpdating {
+   
+    
 //    private lazy var mapView: GMSMapView = {
 //           // 東京を表示する緯度・経度・カメラZoom値を設定
 //           let camera = GMSCameraPosition.camera(
@@ -20,6 +23,8 @@ class MainroomViewController: UIViewController {
 //           return view
 //       }()
    
+    let searchVC = UISearchController(searchResultsController: MainroomViewController())
+    
     
     @IBOutlet var returnButton: UIButton!
     
@@ -28,6 +33,8 @@ class MainroomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchVC.searchResultsUpdater = self
+        navigationItem.searchController = searchVC
         
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
@@ -72,5 +79,9 @@ class MainroomViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
 
 }

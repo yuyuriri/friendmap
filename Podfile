@@ -7,6 +7,7 @@ target 'friendmap' do
 
 pod 'GoogleMaps', '6.1.0'
 pod 'Google-Maps-iOS-Utils', '3.4.0'
+pod 'GooglePlaces', '8.1.0'
 
   # Pods for friendmap
 
