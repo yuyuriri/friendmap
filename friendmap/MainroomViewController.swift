@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+//import MapKit
 
 class MainroomViewController: UIViewController, UISearchResultsUpdating {
    
@@ -96,6 +97,8 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
             return
         }
         
+        resultsVC.delegate = self
+        
         GooglePlacesManager.shared.findPlaces(query: query) { result in
             switch result {
             case .success(let places):
@@ -110,4 +113,28 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
         }
     }
 
+}
+
+extension MainroomViewController: ResultViewControllerDelegate {
+    func didTapPlace(with coordinates: CLLocationCoordinate2D) {
+        searchVC.searchBar.resignFirstResponder()
+        
+        
+        
+        // Add a map pin
+//        let pin = MKPointAnnotation()
+//        pin.coordinate = coordinates
+//        mapView.addAnnotation(pin)
+//        mapView.setRegion(
+//            MKCoordinateRegion(
+//                center: coordinates,
+//                span: MKCoordinateSpan(
+//                    latitudeDelta: 0.2,
+//                    longtitudeDelta: 0.2
+//                )),
+//            animated: true
+//        )
+    }
+    
+    
 }
