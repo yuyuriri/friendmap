@@ -99,7 +99,6 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
         GooglePlacesManager.shared.findPlaces(query: query) { result in
             switch result {
             case .success(let places):
-//                print("found results")
             
                 DispatchQueue.main.async {
                     resultsVC.update(with: places)
