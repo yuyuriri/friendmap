@@ -12,6 +12,10 @@ import GooglePlaces
 class MainroomViewController: UIViewController, UISearchResultsUpdating {
    
     
+    
+    let searchVC = UISearchController(searchResultsController: ResultViewController())
+   
+    
 //    private lazy var mapView: GMSMapView = {
 //           // 東京を表示する緯度・経度・カメラZoom値を設定
 //           let camera = GMSCameraPosition.camera(
@@ -23,8 +27,7 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
 //           return view
 //       }()
    
-    let searchVC = UISearchController(searchResultsController: MainroomViewController())
-    
+//    let searchVC = UISearchController(searchResultsController: nil)
     
     @IBOutlet var returnButton: UIButton!
     
@@ -33,6 +36,10 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Maps"
+        
+        
+        searchVC.searchBar.backgroundColor = .secondarySystemBackground
         searchVC.searchResultsUpdater = self
         navigationItem.searchController = searchVC
         
@@ -80,8 +87,28 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
     }
     */
     
+
+    
     func updateSearchResults(for searchController: UISearchController) {
+        guard let query = searchController.searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+        let resultsVC = searchController.searchResultsController as? ResultViewController else {
+            return
+        }
         
+        GooglePlacesManager.shared.findPlaces(query: query) { result in
+            switch result {
+            case .success(let places):
+//                print("found results")
+            
+                DispatchQueue.main.async {
+                    resultsVC.update(with: places)
+                }
+                
+            case.failure(let error):
+                print(error)
+            }
+        }
     }
 
 }

@@ -21,6 +21,8 @@
 		80AC37012A27520F00864C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC37002A27520F00864C88 /* DetailViewController.swift */; };
 		80AC37062A30979A00864C88 /* TopmenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC37042A30979A00864C88 /* TopmenuCollectionViewCell.swift */; };
 		80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */; };
+		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
+		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
 		A0B7A99B8288E8B9D3E3D2DA /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C1076AFC54029333D99329 /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		80AC37002A27520F00864C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		80AC37042A30979A00864C88 /* TopmenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopmenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopmenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		80D4923B2A8CF53B00936E2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		D2C1076AFC54029333D99329 /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,10 +88,12 @@
 				80AC36EA2A2202C500864C88 /* TopmenuViewController.swift */,
 				80AC37042A30979A00864C88 /* TopmenuCollectionViewCell.swift */,
 				80509C382A752946004BA274 /* MainroomViewController.swift */,
+				80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */,
 				80AC36FC2A24277E00864C88 /* NewroomViewController.swift */,
 				800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */,
 				80AC37002A27520F00864C88 /* DetailViewController.swift */,
 				80AC36FE2A274C2F00864C88 /* roomdata.swift */,
+				80D4923B2A8CF53B00936E2D /* ResultViewController.swift */,
 				80AC36EC2A2202C500864C88 /* Main.storyboard */,
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
 				800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */,
@@ -233,10 +239,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				800865AA2A39D61F00C2911A /* NewroomCollectionViewCell.swift in Sources */,
+				80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */,
 				80AC36FD2A24277E00864C88 /* NewroomViewController.swift in Sources */,
 				80AC36EB2A2202C500864C88 /* TopmenuViewController.swift in Sources */,
 				80AC36FF2A274C2F00864C88 /* roomdata.swift in Sources */,
 				80AC37012A27520F00864C88 /* DetailViewController.swift in Sources */,
+				80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */,
 				80AC36E72A2202C500864C88 /* AppDelegate.swift in Sources */,
 				80AC36E92A2202C500864C88 /* SceneDelegate.swift in Sources */,
 				80AC37062A30979A00864C88 /* TopmenuCollectionViewCell.swift in Sources */,

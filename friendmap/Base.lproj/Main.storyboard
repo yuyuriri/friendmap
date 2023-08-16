@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="UKQ-Pa-z1B">
-            <objects>
-                <navigationController id="2wf-ld-9KH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="WXh-Up-yDW">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="2oK-rK-tUN" kind="relationship" relationship="rootViewController" id="V0x-VC-MvD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kWA-j7-WCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-58" y="-781"/>
-        </scene>
         <!--Mainroom View Controller-->
         <scene sceneID="YgP-3d-Qju">
             <objects>
@@ -34,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-i7-Jih">
-                                <rect key="frame" x="37" y="47" width="75" height="35"/>
+                                <rect key="frame" x="16" y="165" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="戻る"/>
@@ -53,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npp-YH-kPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870.76923076923072" y="-781.27962085308059"/>
+            <point key="canvasLocation" x="871" y="-781"/>
         </scene>
         <!--Topmenu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -95,7 +79,7 @@
                         <outlet property="collectionView" destination="2Fj-mA-VsX" id="0TS-P0-bjk"/>
                         <outlet property="collectionViewFlowLayout" destination="8bC-Xf-vdC" id="Pkl-9P-Oc1"/>
                         <segue destination="LzH-4s-xeY" kind="presentation" identifier="newroom" modalPresentationStyle="fullScreen" id="OK8-M3-fhf"/>
-                        <segue destination="2oK-rK-tUN" kind="presentation" identifier="godetail" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ldD-20-UPL"/>
+                        <segue destination="Haz-sR-Z6m" kind="presentation" identifier="godetail" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="KMn-Ty-ZDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="compact" id="zZp-OI-gW0">
-                                <rect key="frame" x="128" y="487" width="216" height="47"/>
+                                <rect key="frame" x="125" y="487" width="216" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ルーム名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-QN-wNk">
@@ -183,7 +167,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bF4-s3-C2I">
-                                <rect key="frame" x="-17" y="44" width="393" height="44"/>
+                                <rect key="frame" x="-21" y="44" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="VeF-wR-NBd">
@@ -307,10 +291,26 @@
             </objects>
             <point key="canvasLocation" x="-58.46153846153846" y="-3.5545023696682461"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="heq-cP-c6j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Haz-sR-Z6m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aSc-tn-vMM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rux-9A-u6K">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2oK-rK-tUN" kind="relationship" relationship="rootViewController" id="a4K-DY-YtL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzQ-Dt-ZGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="-781"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="V0x-VC-MvD"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
