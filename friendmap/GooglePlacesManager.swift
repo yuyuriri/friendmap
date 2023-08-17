@@ -32,7 +32,7 @@ final class GooglePlacesManager {
     
     public func findPlaces(
         query: String,
-        comletion: @escaping(Result<[Place], Error>) -> Void
+        completion: @escaping(Result<[Place], Error>) -> Void
     ) {
         let filter = GMSAutocompleteFilter()
         filter.type = .geocode
@@ -42,7 +42,7 @@ final class GooglePlacesManager {
             sessionToken: nil
         ) { results, error in
              guard let results = results, error == nil else {
-                 comletion(.failure(PlacesError.failedToFind))
+                 completion(.failure(PlacesError.failedToFind))
             return
         }
             
@@ -52,7 +52,7 @@ final class GooglePlacesManager {
                 )
             })
         
-            comletion(.success(places))
+            completion(.success(places))
         }
     }
     

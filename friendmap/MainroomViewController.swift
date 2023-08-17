@@ -93,7 +93,7 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let query = searchController.searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
-        let resultsVC = searchController.searchResultsController as? ResultViewController else {
+              let resultsVC = searchController.searchResultsController as? ResultViewController else {
             return
         }
         
