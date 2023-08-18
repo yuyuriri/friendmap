@@ -22,6 +22,8 @@ class NewroomViewController: UIViewController,UITextViewDelegate, UITextFieldDel
     @IBOutlet var memoLabel: UILabel!
     @IBOutlet var imageLabel: UILabel!
     
+    @IBOutlet var customimageButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +35,10 @@ class NewroomViewController: UIViewController,UITextViewDelegate, UITextFieldDel
         textField.resignFirstResponder()
         return true
     }
+    
+   
+    
+
     
     
     
