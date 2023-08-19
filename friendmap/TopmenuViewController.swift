@@ -17,6 +17,9 @@ class TopmenuViewController: UIViewController, UICollectionViewDataSource, UICol
     //保存してるデータそれぞれを配列で並べたもの
     var roomArray = [RoomData]()
     
+    //多分ルームごとのデータの保存場所
+    var selectedroom: RoomData!
+    
     private var mapView: GMSMapView!
     
 //    let menuView = TopmenuViewController()
@@ -124,6 +127,14 @@ class TopmenuViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "godetail" {
+            
+            let TopmenuViewController = segue.destination as! MainroomViewController
+            TopmenuViewController.mainroom = selectedroom
+        }
     }
     
     
