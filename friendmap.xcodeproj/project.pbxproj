@@ -28,12 +28,10 @@
 		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
 		80F3D4B12A91091A002008D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */; };
-		A0B7A99B8288E8B9D3E3D2DA /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C1076AFC54029333D99329 /* Pods_friendmap.framework */; };
+		E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		34C4DAE3969DB58223581076 /* Pods-friendmap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.release.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.release.xcconfig"; sourceTree = "<group>"; };
-		35E9C61468F440BC8D52A4A6 /* Pods-friendmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.debug.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.debug.xcconfig"; sourceTree = "<group>"; };
 		800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewroomCollectionViewCell.swift; sourceTree = "<group>"; };
 		800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewroomCollectionViewCell.xib; sourceTree = "<group>"; };
 		80509C382A752946004BA274 /* MainroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainroomViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +55,9 @@
 		80D4923B2A8CF53B00936E2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D2C1076AFC54029333D99329 /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.debug.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.debug.xcconfig"; sourceTree = "<group>"; };
+		9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2EB33133AAFB8FD8660D369 /* Pods-friendmap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.release.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B7A99B8288E8B9D3E3D2DA /* Pods_friendmap.framework in Frameworks */,
+				E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				80AC36E52A2202C500864C88 /* friendmap */,
 				80AC36E42A2202C500864C88 /* Products */,
 				8341A816F8891F7FBED6D27B /* Pods */,
-				CA919B4896510DDBF06C57E1 /* Frameworks */,
+				91A42006FBF97E9431A70661 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,16 +130,16 @@
 		8341A816F8891F7FBED6D27B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				35E9C61468F440BC8D52A4A6 /* Pods-friendmap.debug.xcconfig */,
-				34C4DAE3969DB58223581076 /* Pods-friendmap.release.xcconfig */,
+				8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */,
+				D2EB33133AAFB8FD8660D369 /* Pods-friendmap.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CA919B4896510DDBF06C57E1 /* Frameworks */ = {
+		91A42006FBF97E9431A70661 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2C1076AFC54029333D99329 /* Pods_friendmap.framework */,
+				9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,12 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80AC36F72A2202CA00864C88 /* Build configuration list for PBXNativeTarget "friendmap" */;
 			buildPhases = (
-				65211CBDD167626EAE08561D /* [CP] Check Pods Manifest.lock */,
+				1208055CEA66C641F3D33C79 /* [CP] Check Pods Manifest.lock */,
 				80AC36DF2A2202C500864C88 /* Sources */,
 				80AC36E02A2202C500864C88 /* Frameworks */,
 				80AC36E12A2202C500864C88 /* Resources */,
-				C4D99655EA867694B9DB0983 /* [CP] Copy Pods Resources */,
-				F44273156CA4B52E3D3A3F2B /* [CP] Embed Pods Frameworks */,
+				70E9543318E26695E5F9492D /* [CP] Copy Pods Resources */,
+				3FF299EE8D43611F555B1FF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +218,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65211CBDD167626EAE08561D /* [CP] Check Pods Manifest.lock */ = {
+		1208055CEA66C641F3D33C79 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,24 +240,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4D99655EA867694B9DB0983 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F44273156CA4B52E3D3A3F2B /* [CP] Embed Pods Frameworks */ = {
+		3FF299EE8D43611F555B1FF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,6 +255,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70E9543318E26695E5F9492D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -436,7 +436,7 @@
 		};
 		80AC36F82A2202CA00864C88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35E9C61468F440BC8D52A4A6 /* Pods-friendmap.debug.xcconfig */;
+			baseConfigurationReference = 8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,7 +467,7 @@
 		};
 		80AC36F92A2202CA00864C88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34C4DAE3969DB58223581076 /* Pods-friendmap.release.xcconfig */;
+			baseConfigurationReference = D2EB33133AAFB8FD8660D369 /* Pods-friendmap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

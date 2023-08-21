@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
         appLabel.textColor = UIColor.label
     }
     @IBOutlet weak var signInButton: GIDSignInButton!
-    @IBOutlet var appLabel: UILabel!
     
     @IBAction func LoginButtonTapped(_ sender: Any) {
         auth()

@@ -8,23 +8,13 @@ target 'friendmap' do
 pod 'GoogleMaps', '6.1.0'
 pod 'Google-Maps-iOS-Utils', '3.4.0'
 pod 'GooglePlaces', '8.1.0'
-#pod 'Firebase/Analytics'
-pod 'Firebase'
-#pod 'FirebaseUI/Auth'
-pod 'FirebaseAnalytics'
-pod 'FirebaseAuth'
-pod 'GoogleSignIn'
-pod 'FirebaseFirestore'
 
 # Pods for Connect
-#pod 'FirebaseAnalytics'
-#pod 'FirebaseUI/Auth'
-#pod 'Firebase'
-##  pod 'FirebaseUI'
-#pod 'Eureka', '~> 5.2.1'
-#pod 'ImageRow', '~> 4.0'
-#pod 'FirebaseAuth'
-#  pod 'FirebaseCore'
+pod 'FirebaseAnalytics'
+pod 'FirebaseUI/Auth'
+pod 'Firebase'
+pod 'FirebaseAuth'
+pod 'FirebaseCore'
 #  pod 'GoogleAPIClientForREST/Calendar', "1.5.2"
 #  pod 'GoogleUtilities'
 #  pod 'FBAEMKit'
@@ -32,7 +22,7 @@ pod 'FirebaseFirestore'
 #  pod 'FBSDKCoreKit_Basics'
 #  pod 'FBSDKLoginKit'
 #  pod 'FirebaseAppCheckInterop'
-#pod 'FirebaseAuth'
+pod 'FirebaseAuth'
 #  pod 'FirebaseAuthInterop'
 #  pod 'FirebaseCoreExtension'
 #  pod 'FirebaseDatabase'
@@ -40,14 +30,23 @@ pod 'FirebaseFirestore'
 #  pod 'GoogleAppUtilities'
 #  pod 'GoogleAuthUtilities'
 #  pod 'GoogleNetworkingUtilities'
-#pod 'GoogleSignIn'
-#pod 'FirebaseFirestore'
+pod 'GoogleSignIn'
+pod 'FirebaseFirestoreSwift'
 #  pod 'GoogleSymbolUtilities'
 #  pod 'SDWebImage'
 #  pod 'TwitterCore'
 #  pod 'TwitterKit'
 #  pod 'leveldb-library'
 #  pod 'GTMSessionFetcher'
+#pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '7.11.0'
+
+
+
+
+
+
+
+
 
 
   # Pods for friendmap

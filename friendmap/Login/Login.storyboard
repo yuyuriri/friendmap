@@ -20,12 +20,16 @@
                                 <rect key="frame" x="80" y="571" width="240" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <action selector="LoginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T6w-2C-dpY"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="signInButton" destination="jJU-hh-82w" id="S9Z-4M-aLJ"/>
                         <segue destination="Ydl-Sc-b97" kind="presentation" identifier="toSignUp" id="0tX-kF-xTk"/>
                     </connections>
                 </viewController>
