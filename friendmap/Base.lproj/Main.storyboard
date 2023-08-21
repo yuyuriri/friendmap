@@ -28,7 +28,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zxz-p9-ezP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="d6x-Lw-wJd"/>
                     <connections>
@@ -72,7 +72,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="XZP-lV-wfC"/>
                     <connections>
@@ -121,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="compact" id="zZp-OI-gW0">
-                                <rect key="frame" x="122" y="487" width="216" height="47"/>
+                                <rect key="frame" x="121" y="487" width="216" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ルーム名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-QN-wNk">
@@ -171,29 +171,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bF4-s3-C2I">
-                                <rect key="frame" x="-1" y="37" width="389" height="44"/>
+                                <rect key="frame" x="-2" y="37" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="新規ルーム" id="VeF-wR-NBd">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="YIY-S0-8Wv">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="nc2-Nv-6Mk">
-                                                <rect key="frame" x="15.999999999999996" y="4.6666666666666679" width="58.666666666666657" height="35"/>
+                                        <barButtonItem key="leftBarButtonItem" title="cancel" id="Des-NW-mJb">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="acn-gw-qNB">
+                                                <rect key="frame" x="16" y="4.6666666666666679" width="86" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="cancel"/>
                                                 <connections>
-                                                    <action selector="cancel" destination="LzH-4s-xeY" eventType="touchUpInside" id="ukS-QZ-OzV"/>
+                                                    <action selector="cancel" destination="LzH-4s-xeY" eventType="touchUpInside" id="J0s-hh-TdG"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="3Gj-nY-ndV">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h2P-Ax-K5E">
-                                                <rect key="frame" x="145.66666666666663" y="4.6666666666666679" width="227.33333333333337" height="35"/>
+                                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="X7H-Yh-HO6">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="c4a-Xm-Vm8">
+                                                <rect key="frame" x="290" y="4.6666666666666679" width="86" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="作成"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="save"/>
                                                 <connections>
-                                                    <action selector="save" destination="LzH-4s-xeY" eventType="touchUpInside" id="nfr-xF-m04"/>
+                                                    <action selector="save" destination="LzH-4s-xeY" eventType="touchUpInside" id="8rs-qz-OCs"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -202,7 +203,8 @@
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M0F-6m-f57"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="x2r-TD-IHs"/>
                     <connections>
@@ -295,6 +297,21 @@
             </objects>
             <point key="canvasLocation" x="-58.46153846153846" y="-3.5545023696682461"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="d1a-8r-doy">
+            <objects>
+                <viewController id="Yey-Gu-Jrf" customClass="SignUpViewController" customModule="friendmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CsG-oV-LMC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8gX-dN-dfA"/>
+                        <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxQ-X6-plI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1264" y="-678"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="heq-cP-c6j">
             <objects>
@@ -315,15 +332,17 @@
             <point key="canvasLocation" x="-58" y="-781"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="tintColor"/>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

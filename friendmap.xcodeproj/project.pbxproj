@@ -10,6 +10,10 @@
 		800865AA2A39D61F00C2911A /* NewroomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */; };
 		800865AB2A39D61F00C2911A /* NewroomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */; };
 		80509C392A752946004BA274 /* MainroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80509C382A752946004BA274 /* MainroomViewController.swift */; };
+		808067852A91192C002A08E9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808067842A91192C002A08E9 /* SignUpViewController.swift */; };
+		808067892A9268B2002A08E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808067882A9268B2002A08E9 /* LoginViewController.swift */; };
+		8080678B2A9268D5002A08E9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080678A2A9268D5002A08E9 /* SignUpViewController.swift */; };
+		8080678D2A9268F7002A08E9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8080678C2A9268F7002A08E9 /* Login.storyboard */; };
 		80AC36E72A2202C500864C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC36E62A2202C500864C88 /* AppDelegate.swift */; };
 		80AC36E92A2202C500864C88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC36E82A2202C500864C88 /* SceneDelegate.swift */; };
 		80AC36EB2A2202C500864C88 /* TopmenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC36EA2A2202C500864C88 /* TopmenuViewController.swift */; };
@@ -23,6 +27,7 @@
 		80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */; };
 		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
+		80F3D4B12A91091A002008D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */; };
 		A0B7A99B8288E8B9D3E3D2DA /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C1076AFC54029333D99329 /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +37,10 @@
 		800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewroomCollectionViewCell.swift; sourceTree = "<group>"; };
 		800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewroomCollectionViewCell.xib; sourceTree = "<group>"; };
 		80509C382A752946004BA274 /* MainroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainroomViewController.swift; sourceTree = "<group>"; };
+		808067842A91192C002A08E9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		808067882A9268B2002A08E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8080678A2A9268D5002A08E9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8080678C2A9268F7002A08E9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		80AC36E32A2202C500864C88 /* friendmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = friendmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC36E62A2202C500864C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80AC36E82A2202C500864C88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,7 @@
 		80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopmenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		80D4923B2A8CF53B00936E2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
+		80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D2C1076AFC54029333D99329 /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		808067872A92686F002A08E9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				808067882A9268B2002A08E9 /* LoginViewController.swift */,
+				8080678A2A9268D5002A08E9 /* SignUpViewController.swift */,
+				8080678C2A9268F7002A08E9 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		80AC36DA2A2202C500864C88 = {
 			isa = PBXGroup;
 			children = (
@@ -94,12 +114,15 @@
 				80AC37002A27520F00864C88 /* DetailViewController.swift */,
 				80AC36FE2A274C2F00864C88 /* roomdata.swift */,
 				80D4923B2A8CF53B00936E2D /* ResultViewController.swift */,
+				808067842A91192C002A08E9 /* SignUpViewController.swift */,
 				80AC36EC2A2202C500864C88 /* Main.storyboard */,
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
 				800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */,
 				80AC36EF2A2202CA00864C88 /* Assets.xcassets */,
 				80AC36F12A2202CA00864C88 /* LaunchScreen.storyboard */,
+				808067872A92686F002A08E9 /* Login */,
 				80AC36F42A2202CA00864C88 /* Info.plist */,
+				80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */,
 			);
 			path = friendmap;
 			sourceTree = "<group>";
@@ -133,6 +156,7 @@
 				80AC36E02A2202C500864C88 /* Frameworks */,
 				80AC36E12A2202C500864C88 /* Resources */,
 				C4D99655EA867694B9DB0983 /* [CP] Copy Pods Resources */,
+				F44273156CA4B52E3D3A3F2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,9 +207,11 @@
 			files = (
 				80AC36F32A2202CA00864C88 /* LaunchScreen.storyboard in Resources */,
 				800865AB2A39D61F00C2911A /* NewroomCollectionViewCell.xib in Resources */,
+				8080678D2A9268F7002A08E9 /* Login.storyboard in Resources */,
 				80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */,
 				80AC36F02A2202CA00864C88 /* Assets.xcassets in Resources */,
 				80AC36EE2A2202C500864C88 /* Main.storyboard in Resources */,
+				80F3D4B12A91091A002008D6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +257,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F44273156CA4B52E3D3A3F2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-friendmap/Pods-friendmap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -244,10 +287,13 @@
 				80AC36EB2A2202C500864C88 /* TopmenuViewController.swift in Sources */,
 				80AC36FF2A274C2F00864C88 /* roomdata.swift in Sources */,
 				80AC37012A27520F00864C88 /* DetailViewController.swift in Sources */,
+				808067852A91192C002A08E9 /* SignUpViewController.swift in Sources */,
 				80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */,
+				8080678B2A9268D5002A08E9 /* SignUpViewController.swift in Sources */,
 				80AC36E72A2202C500864C88 /* AppDelegate.swift in Sources */,
 				80AC36E92A2202C500864C88 /* SceneDelegate.swift in Sources */,
 				80AC37062A30979A00864C88 /* TopmenuCollectionViewCell.swift in Sources */,
+				808067892A9268B2002A08E9 /* LoginViewController.swift in Sources */,
 				80509C392A752946004BA274 /* MainroomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +445,8 @@
 				DEVELOPMENT_TEAM = 57KGRFU4Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = friendmap/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ルーム作成時に使用します。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示する為に使用します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -428,6 +476,8 @@
 				DEVELOPMENT_TEAM = 57KGRFU4Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = friendmap/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ルーム作成時に使用します。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示する為に使用します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
