@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npp-YH-kPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="-781"/>
+            <point key="canvasLocation" x="1146" y="-781"/>
         </scene>
         <!--Topmenu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -74,7 +74,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XZP-lV-wfC"/>
+                    <navigationItem key="navigationItem" id="XZP-lV-wfC">
+                        <barButtonItem key="rightBarButtonItem" image="person.circle" catalog="system" style="plain" id="owr-eo-qUh">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="accountButtonTapped" destination="BYZ-38-t0r" id="9an-5q-LMN"/>
+                                <segue destination="1lA-nj-H8w" kind="presentation" identifier="toAccountDetail" id="9Qr-R5-N78"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="2Fj-mA-VsX" id="0TS-P0-bjk"/>
                         <outlet property="collectionViewFlowLayout" destination="8bC-Xf-vdC" id="Pkl-9P-Oc1"/>
@@ -84,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870.76923076923072" y="-3.5545023696682461"/>
+            <point key="canvasLocation" x="-518" y="-4"/>
         </scene>
         <!--Newroom View Controller-->
         <scene sceneID="UWK-mE-4yP">
@@ -121,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="compact" id="zZp-OI-gW0">
-                                <rect key="frame" x="121" y="487" width="216" height="47"/>
+                                <rect key="frame" x="118" y="487" width="217" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ルーム名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-QN-wNk">
@@ -171,13 +179,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bF4-s3-C2I">
-                                <rect key="frame" x="-2" y="37" width="392" height="44"/>
+                                <rect key="frame" x="-4" y="37" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="新規ルーム" id="VeF-wR-NBd">
                                         <barButtonItem key="leftBarButtonItem" title="cancel" id="Des-NW-mJb">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="acn-gw-qNB">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="acn-gw-qNB">
                                                 <rect key="frame" x="16" y="4.6666666666666679" width="86" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -188,7 +196,7 @@
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="X7H-Yh-HO6">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="c4a-Xm-Vm8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="c4a-Xm-Vm8">
                                                 <rect key="frame" x="290" y="4.6666666666666679" width="86" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
@@ -222,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpc-5U-Ri8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2173.8461538461538" y="8.5308056872037916"/>
+            <point key="canvasLocation" x="451" y="-4"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="K5U-Um-5af">
@@ -277,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgy-NF-rlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69" y="927"/>
+            <point key="canvasLocation" x="-128" y="904"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vPe-i7-qQl">
@@ -295,22 +303,61 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sY-Jg-IwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58.46153846153846" y="-3.5545023696682461"/>
+            <point key="canvasLocation" x="-1449" y="-4"/>
         </scene>
-        <!--Sign Up View Controller-->
-        <scene sceneID="d1a-8r-doy">
+        <!--Setting View Controller-->
+        <scene sceneID="XNP-sS-bnk">
             <objects>
-                <viewController id="Yey-Gu-Jrf" customClass="SignUpViewController" customModule="friendmap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CsG-oV-LMC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                <viewController id="1lA-nj-H8w" customClass="SettingViewController" customModule="friendmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ch-KW-ndA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8gX-dN-dfA"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFA-db-3pJ">
+                                <rect key="frame" x="124" y="168" width="233" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-OF-CvW">
+                                <rect key="frame" x="54" y="153" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XH-ch-5DS">
+                                <rect key="frame" x="103" y="326" width="163" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="アカウントを削除"/>
+                                <connections>
+                                    <action selector="deleteAccountButtonTapped" destination="1lA-nj-H8w" eventType="touchUpInside" id="67u-bo-i9N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-Q7-0Xx">
+                                <rect key="frame" x="101" y="251" width="166" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="サインアウト">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="1lA-nj-H8w" eventType="touchUpInside" id="wYj-Ge-tRL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kDm-2J-ZKw"/>
                         <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="accountImage" destination="2Fj-OF-CvW" id="Y9n-K2-jKV"/>
+                        <outlet property="accountName" destination="aFA-db-3pJ" id="DD9-YE-cJ3"/>
+                        <outlet property="signOutButton" destination="2Ux-Q7-0Xx" id="Qtm-br-J1b"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CxQ-X6-plI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRg-zx-gIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1264" y="-678"/>
+            <point key="canvasLocation" x="-518.46153846153845" y="-781.27962085308059"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="heq-cP-c6j">
@@ -329,17 +376,21 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzQ-Dt-ZGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="-781"/>
+            <point key="canvasLocation" x="263" y="-781"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

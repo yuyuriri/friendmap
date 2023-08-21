@@ -57,6 +57,13 @@ class TopmenuViewController: UIViewController, UICollectionViewDataSource, UICol
         UserDefaults.standard.register(defaults: ["room": data])
     }
     
+    //     アカウントアイコンがタップされたときに実行されるメソッド
+        @IBAction func accountButtonTapped() {
+
+            performSegue(withIdentifier: "toAccountDetail", sender: nil)
+            
+        }
+    
     var delegate: TopmenuViewController? = nil
     
     override func viewDidLayoutSubviews() {
