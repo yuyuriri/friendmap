@@ -29,6 +29,7 @@
 		80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */; };
 		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
+		80EBE2172A94B49F0025C102 /* UserDataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */; };
 		80F3D4B12A91091A002008D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */; };
 		E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopmenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		80D4923B2A8CF53B00936E2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
+		80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreViewController.swift; sourceTree = "<group>"; };
 		80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.debug.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.debug.xcconfig"; sourceTree = "<group>"; };
 		9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,10 +118,11 @@
 				80AC36FC2A24277E00864C88 /* NewroomViewController.swift */,
 				800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */,
 				80AC37002A27520F00864C88 /* DetailViewController.swift */,
-				80AC36FE2A274C2F00864C88 /* roomdata.swift */,
 				80D4923B2A8CF53B00936E2D /* ResultViewController.swift */,
 				8080678E2A93A1CB002A08E9 /* SettingViewController.swift */,
 				808067902A93AEBF002A08E9 /* UpdateAccountViewController.swift */,
+				80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */,
+				80AC36FE2A274C2F00864C88 /* roomdata.swift */,
 				808067922A945092002A08E9 /* UserManager.swift */,
 				80AC36EC2A2202C500864C88 /* Main.storyboard */,
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
@@ -303,6 +306,7 @@
 				808067892A9268B2002A08E9 /* LoginViewController.swift in Sources */,
 				80509C392A752946004BA274 /* MainroomViewController.swift in Sources */,
 				808067912A93AEBF002A08E9 /* UpdateAccountViewController.swift in Sources */,
+				80EBE2172A94B49F0025C102 /* UserDataStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
