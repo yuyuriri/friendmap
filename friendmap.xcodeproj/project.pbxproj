@@ -30,7 +30,7 @@
 		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
 		80EBE2172A94B49F0025C102 /* UserDataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */; };
-		80EBE2192A94C2600025C102 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */; };
+		80EBE21B2A94C8460025C102 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */; };
 		E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,7 @@
 		80D4923B2A8CF53B00936E2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreViewController.swift; sourceTree = "<group>"; };
-		80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.debug.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.debug.xcconfig"; sourceTree = "<group>"; };
 		9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EB33133AAFB8FD8660D369 /* Pods-friendmap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.release.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +128,10 @@
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
 				800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */,
 				80AC36EF2A2202CA00864C88 /* Assets.xcassets */,
+				80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */,
 				80AC36F12A2202CA00864C88 /* LaunchScreen.storyboard */,
 				808067872A92686F002A08E9 /* Login */,
 				80AC36F42A2202CA00864C88 /* Info.plist */,
-				80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */,
 			);
 			path = friendmap;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 				80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */,
 				80AC36F02A2202CA00864C88 /* Assets.xcassets in Resources */,
 				80AC36EE2A2202C500864C88 /* Main.storyboard in Resources */,
-				80EBE2192A94C2600025C102 /* GoogleService-Info.plist in Resources */,
+				80EBE21B2A94C8460025C102 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
