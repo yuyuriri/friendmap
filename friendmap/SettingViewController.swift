@@ -10,14 +10,25 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController, CatchProtocol {
+    
+    func catchData(newAccountName: String) {
+        accountName.text = newAccountName
+    }
 
     @IBOutlet var signOutButton: UIButton!
     @IBOutlet var accountImage: UIImageView!
     @IBOutlet var accountName: UILabel!
+    @IBOutlet var updateButton: UIButton!
+    
+    var userManager = UserManager()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //アカウント名と画像を表示
+        AccountDisplay()
         
         accountImage.layer.cornerRadius = accountImage.frame.size.width / 2
         accountImage.clipsToBounds = true
@@ -30,6 +41,10 @@ class SettingViewController: UIViewController {
         // Firebase Authenticationでログインしているかどうかを確認する
         guard let user = Auth.auth().currentUser else {
             return
+            
+            
+            
+            
         }
         
         // Googleアカウントのプロフィール画像のURLを取得する
@@ -77,8 +92,21 @@ class SettingViewController: UIViewController {
                 
             }
         
-        view.backgroundColor = UIColor.DynamicBackGroundColor
-        signOutButton.configuration?.baseBackgroundColor = UIColor.SubColor
+//        view.backgroundColor = UIColor.DynamicBackGroundColor
+//        signOutButton.configuration?.baseBackgroundColor = UIColor.SubColor
+        
+        // Firestoreのデータベースを参照する
+//        let db = Firestore.firestore()
+//        print(tags)
+        
+//        view.backgroundColor = UIColor.DynamicBackGroundColor
+//        tableView.backgroundColor = UIColor.DynamicBackGroundColor
+//        updateButton.configuration?.baseBackgroundColor = UIColor.SubColor
+        
+        //ボタンにスタイルを追加
+//        addStyle(to: addButton)
+//        addButton.layer.cornerRadius = 30
+//        addStyle(to: updateButton)
     }
         
     
@@ -101,6 +129,51 @@ class SettingViewController: UIViewController {
         
        
     }
+    
+    @IBAction func UpdateButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ToUpdateViewController", sender: nil)
+    }
+    
+    func AccountDisplay() {
+        accountImage.layer.cornerRadius = accountImage.frame.size.width / 2
+        accountImage.clipsToBounds = true
+        
+        guard let user = Auth.auth().currentUser else { return }
+        
+        guard let photoURL = user.photoURL else { return }
+        
+        URLSession.shared.dataTask(with: photoURL) { (data, response, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            if let data = data {
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data)
+                    self.accountImage.image = image
+                }
+            }
+        }.resume()
+        
+//        self.userManager.getUserDisplayName { displayName in
+//            DispatchQueue.main.async {
+//                self.accountName.text = displayName
+//            }
+//        }
+    }
+    
+    //影のスタイル
+    func addStyle(to button: UIButton!){
+        //影の濃さ
+        button.layer.shadowOpacity = 0.1
+        //ぼかしの大きさ
+        button.layer.shadowRadius = 5
+        //いろ
+        button.layer.shadowColor = UIColor.black.cgColor
+        //影の方向
+        button.layer.shadowOffset = CGSize(width: 2, height: 2)
+    }
+    
     
     @objc func signOut() {
         do {

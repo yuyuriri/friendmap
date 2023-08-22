@@ -9,33 +9,33 @@
     </dependencies>
     <scenes>
         <!--Login View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="0nu-Mx-xJt">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="friendmap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="GIDSignInButton">
+                <viewController storyboardIdentifier="LoginView" id="1hl-XU-vRk" customClass="LoginViewController" customModule="friendmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U37-dv-F06">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJU-hh-82w" customClass="GIDSignInButton">
-                                <rect key="frame" x="80" y="571" width="240" height="50"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZk-3A-AbF" customClass="GIDSignInButton">
+                                <rect key="frame" x="76" y="527" width="240" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="LoginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T6w-2C-dpY"/>
+                                    <action selector="LoginButtonTapped:" destination="1hl-XU-vRk" eventType="touchUpInside" id="Vck-Cc-Mlt"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="ev8-UP-l3L"/>
                         <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="jJU-hh-82w" id="S9Z-4M-aLJ"/>
-                        <segue destination="Ydl-Sc-b97" kind="presentation" identifier="toSignUp" id="0tX-kF-xTk"/>
+                        <outlet property="signInButton" destination="jZk-3A-AbF" id="PoE-2K-jyp"/>
+                        <segue destination="Ydl-Sc-b97" kind="presentation" identifier="toSignUp" id="QAz-uI-xUa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6Y-2b-ccN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="-2"/>
+            <point key="canvasLocation" x="726" y="-671"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Tbm-bg-hCZ">
@@ -71,13 +71,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="※ ニックネームはいつでも変えられます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-HK-aKh">
-                                <rect key="frame" x="87" y="519" width="219" height="14.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAt-Je-KEZ">
                                 <rect key="frame" x="146" y="621" width="100" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -87,11 +80,17 @@
                                 <buttonConfiguration key="configuration" style="filled" title="登録">
                                     <color key="baseBackgroundColor" red="1" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonTapped" destination="Ydl-Sc-b97" eventType="touchUpInside" id="oLq-6g-ghB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RRR-1I-ady"/>
                         <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="7gy-Pq-Ghv" id="IPB-hY-Rso"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WM5-e3-HLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

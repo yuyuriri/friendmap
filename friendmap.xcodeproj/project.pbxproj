@@ -14,6 +14,8 @@
 		8080678B2A9268D5002A08E9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080678A2A9268D5002A08E9 /* SignUpViewController.swift */; };
 		8080678D2A9268F7002A08E9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8080678C2A9268F7002A08E9 /* Login.storyboard */; };
 		8080678F2A93A1CB002A08E9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080678E2A93A1CB002A08E9 /* SettingViewController.swift */; };
+		808067912A93AEBF002A08E9 /* UpdateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808067902A93AEBF002A08E9 /* UpdateAccountViewController.swift */; };
+		808067932A945092002A08E9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808067922A945092002A08E9 /* UserManager.swift */; };
 		80AC36E72A2202C500864C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC36E62A2202C500864C88 /* AppDelegate.swift */; };
 		80AC36E92A2202C500864C88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC36E82A2202C500864C88 /* SceneDelegate.swift */; };
 		80AC36EB2A2202C500864C88 /* TopmenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC36EA2A2202C500864C88 /* TopmenuViewController.swift */; };
@@ -39,6 +41,8 @@
 		8080678A2A9268D5002A08E9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8080678C2A9268F7002A08E9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8080678E2A93A1CB002A08E9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		808067902A93AEBF002A08E9 /* UpdateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountViewController.swift; sourceTree = "<group>"; };
+		808067922A945092002A08E9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		80AC36E32A2202C500864C88 /* friendmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = friendmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC36E62A2202C500864C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80AC36E82A2202C500864C88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				80AC36FE2A274C2F00864C88 /* roomdata.swift */,
 				80D4923B2A8CF53B00936E2D /* ResultViewController.swift */,
 				8080678E2A93A1CB002A08E9 /* SettingViewController.swift */,
+				808067902A93AEBF002A08E9 /* UpdateAccountViewController.swift */,
+				808067922A945092002A08E9 /* UserManager.swift */,
 				80AC36EC2A2202C500864C88 /* Main.storyboard */,
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
 				800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */,
@@ -287,6 +293,7 @@
 				80AC36EB2A2202C500864C88 /* TopmenuViewController.swift in Sources */,
 				80AC36FF2A274C2F00864C88 /* roomdata.swift in Sources */,
 				8080678F2A93A1CB002A08E9 /* SettingViewController.swift in Sources */,
+				808067932A945092002A08E9 /* UserManager.swift in Sources */,
 				80AC37012A27520F00864C88 /* DetailViewController.swift in Sources */,
 				80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */,
 				8080678B2A9268D5002A08E9 /* SignUpViewController.swift in Sources */,
@@ -295,6 +302,7 @@
 				80AC37062A30979A00864C88 /* TopmenuCollectionViewCell.swift in Sources */,
 				808067892A9268B2002A08E9 /* LoginViewController.swift in Sources */,
 				80509C392A752946004BA274 /* MainroomViewController.swift in Sources */,
+				808067912A93AEBF002A08E9 /* UpdateAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

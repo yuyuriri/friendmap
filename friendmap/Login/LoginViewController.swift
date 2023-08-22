@@ -16,9 +16,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        signInButton.style = .wide
-        view.backgroundColor = UIColor.DynamicBackGroundColor
-        appLabel.textColor = UIColor.label
+//        signInButton.style = .wide
+//        view.backgroundColor = UIColor.DynamicBackGroundColor
     }
     @IBOutlet weak var signInButton: GIDSignInButton!
     

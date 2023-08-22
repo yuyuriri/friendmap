@@ -20,7 +20,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4 - d7b9cc99fb60f37"
+                  uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4 - d7b9cc99fb608e9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/MainroomViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
                   offsetFromSymbolStart = "324">
                </Location>
                <Location
-                  uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4 - b45567dc383779e6"
+                  uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4 - b45567dc38377e24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/MainroomViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
                   offsetFromSymbolStart = "48">
                </Location>
             </Locations>
@@ -65,6 +65,22 @@
             startingLineNumber = "113"
             endingLineNumber = "113"
             landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89A3923B-57F1-4403-8CD9-DAE8BD42D281"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "friendmap/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "auth()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
