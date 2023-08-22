@@ -30,7 +30,7 @@
 		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
 		80EBE2172A94B49F0025C102 /* UserDataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */; };
-		80F3D4B12A91091A002008D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */; };
+		80EBE2192A94C2600025C102 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D4B02A91091A002008D6 /* GoogleService-Info.plist */; };
 		E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,7 +220,7 @@
 				80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */,
 				80AC36F02A2202CA00864C88 /* Assets.xcassets in Resources */,
 				80AC36EE2A2202C500864C88 /* Main.storyboard in Resources */,
-				80F3D4B12A91091A002008D6 /* GoogleService-Info.plist in Resources */,
+				80EBE2192A94C2600025C102 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

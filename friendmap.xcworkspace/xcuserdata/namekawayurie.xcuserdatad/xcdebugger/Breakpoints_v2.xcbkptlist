@@ -84,5 +84,101 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B76033B-8AE7-4532-A238-08D67D8A9D4E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "friendmap/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "auth()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7B76033B-8AE7-4532-A238-08D67D8A9D4E - fea7085fdb383a50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "friendmap.LoginViewController.auth() -&gt; ()"
+                  moduleName = "friendmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "7B76033B-8AE7-4532-A238-08D67D8A9D4E - f6b354ef0f5b1eb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in friendmap.LoginViewController.auth() -&gt; ()"
+                  moduleName = "friendmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB3B4F32-0FC0-41C6-A2EA-2D7F6F424B85"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "friendmap/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "auth()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB3B4F32-0FC0-41C6-A2EA-2D7F6F424B85 - f6b354ef0f5b1fa9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in friendmap.LoginViewController.auth() -&gt; ()"
+                  moduleName = "friendmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "BB3B4F32-0FC0-41C6-A2EA-2D7F6F424B85 - f6b354ef0f5b1fa9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in friendmap.LoginViewController.auth() -&gt; ()"
+                  moduleName = "friendmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

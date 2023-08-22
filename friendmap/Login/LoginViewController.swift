@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
             //                        self.present(mainVC, animated: true)
                                     
                                     
-                                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as UIViewController
+                                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TopmenuViewController") as UIViewController
                                     let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
                                     sceneDelegate.window!.rootViewController = vc
                                     

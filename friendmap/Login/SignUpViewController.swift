@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
         // ユーザーが入力した名前を取得
         if let name = nameTextField.text, !name.isEmpty {
             // 入力した名前を使用して、Userオブジェクトを作成
-            let user = User.self
+            let user = User(displayName: name, createdTime: Date(), uid: Auth.auth().currentUser!.uid)
             
             // Firestoreのコレクションにアクセス
             let db = Firestore.firestore()

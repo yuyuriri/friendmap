@@ -24,34 +24,34 @@ struct User: Codable {
 
 final class UserDataStore{
     
-//    /// 引数で渡されたuserオブジェクトをFirestoreに保存します
-//    /// - Parameters:
-//    ///   - user: 保存するユーザー情報
-//    ///   - completion: 保存処理の成否を返すクロージャー
-//    static func createUser(user: User, completion: @escaping (_ success: Bool) -> Void) {
-//        let db = Firestore.firestore()
-//        let encoder = JSONEncoder()
-//        encoder.dateEncodingStrategy = .secondsSince1970
-//        //userオブジェクトをJSONデータに変換
-//        let data = try! encoder.encode(user)
-//        //JSONオブジェクトを辞書に変換
-//        var dictionary = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
-//        dictionary["created_time"] = dateToTimestamp(user.createdTime)
-//        db.collection("users").document(user.uid).setData(dictionary) { (error) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//                completion(false)
-//                return
-//            }
-//            completion(true)
-//        }
+    //    /// 引数で渡されたuserオブジェクトをFirestoreに保存します
+    //    /// - Parameters:
+    //    ///   - user: 保存するユーザー情報
+    //    ///   - completion: 保存処理の成否を返すクロージャー
+    static func createUser(user: User, completion: @escaping (_ success: Bool) -> Void) {
+        let db = Firestore.firestore()
+        let encoder = JSONEncoder()
+        //        encoder.dateEncodingStrategy = .secondsSince1970
+        //userオブジェクトをJSONデータに変換
+        let data = try! encoder.encode(user)
+        //JSONオブジェクトを辞書に変換
+        var dictionary = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
+        //        dictionary["created_time"] = dateToTimestamp(user.createdTime)
+        db.collection("users").document(user.uid).setData(dictionary) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+                return
+            }
+            completion(true)
+        }
     }
     
     /// 現在のユーザーの情報を更新します
     /// - Parameters:
     ///   - displayName: 更新後の表示名
     ///   - completion: 更新処理の成否を返すクロージャー
-func updateUser(displayName: String, completion: @escaping (_ success: Bool) -> Void) {
+    func updateUser(displayName: String, completion: @escaping (_ success: Bool) -> Void) {
         let db = Firestore.firestore()
         let userRef = db.collection("users").document(Auth.auth().currentUser!.uid)
         userRef.updateData(["display_name": displayName]) { (error) in
@@ -67,7 +67,7 @@ func updateUser(displayName: String, completion: @escaping (_ success: Bool) -> 
     /// Firestoreから現在のユーザーの情報を取得します。
     /// - Parameters:
     ///   - completion: 取得したユーザー情報を返すクロージャー
-func fetchUserData(completion: @escaping (_ user: User?) -> Void) {
+    func fetchUserData(completion: @escaping (_ user: User?) -> Void) {
         let db = Firestore.firestore()
         let userRef = db.collection("users").document(Auth.auth().currentUser!.uid)
         userRef.getDocument { (snapshot, error) in
@@ -92,7 +92,8 @@ func fetchUserData(completion: @escaping (_ user: User?) -> Void) {
     }
     
     //DateからTimestampに変換
-//    static func dateToTimestamp(_ date: Date?) -> Timestamp? {
-//        guard let date = date else { return nil }
-//        return Timestamp(date: date)
-//    }
+    //    static func dateToTimestamp(_ date: Date?) -> Timestamp? {
+    //        guard let date = date else { return nil }
+    //        return Timestamp(date: date)
+    //    }
+}
