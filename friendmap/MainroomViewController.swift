@@ -8,7 +8,6 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
-//import MapKit
 
 class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResultsUpdating {
    
@@ -60,9 +59,14 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
 //ピンの色変更
 //        marker.icon = GMSMarker.markerImage(with: .black)
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        
+//吹き出しのメインタイトル
         marker.title = "メインタイトル"
+//吹き出しのサブタイトル
         marker.snippet = "サブタイトル"
+//マーカーのアイコンをイメージにする
         marker.icon = self.imageWithImage(image: UIImage(named: "camera_1")!, scaledToSize: CGSize(width: 50.0, height: 50.0))
+        
         marker.tracksViewChanges = true
         marker.map = mapView
         
