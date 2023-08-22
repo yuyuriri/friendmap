@@ -37,6 +37,10 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
 
     
     var mainroom: RoomData!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +52,30 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         searchVC.searchResultsUpdater = self
         navigationItem.searchController = searchVC
         
+
+        let camera = GMSCameraPosition.camera(
+            withLatitude: -33.86,
+            longitude: 151.20,
+            zoom: 6.0)
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        
         let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         self.view.addSubview(mapView)
+        
+//右下のボタンを追加
+        mapView.settings.myLocationButton = true
+        
+//現在地表示
+        mapView.isMyLocationEnabled = true
+        
+        
 
 //Creates a marker in the center of the map.
         let marker = GMSMarker()
         
 //ピンの色変更
 //        marker.icon = GMSMarker.markerImage(with: .black)
+        
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         
 //吹き出しのメインタイトル
@@ -76,6 +94,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
         
+// viewにMapViewを追加？
 //        view.addSubview(mapView)
 
         // Do any additional setup after loading the view.
