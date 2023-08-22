@@ -10,8 +10,11 @@ import GoogleMaps
 import GooglePlaces
 //import MapKit
 
-class MainroomViewController: UIViewController, UISearchResultsUpdating {
+class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResultsUpdating {
    
+    var mapView: GMSMapView!
+    var tappedMarker : GMSMarker?
+    var customInfoWindow : CustomInfoWindow?
     
     
     let searchVC = UISearchController(searchResultsController: ResultViewController())
@@ -48,16 +51,24 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
         
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-                let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-                self.view.addSubview(mapView)
+        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        self.view.addSubview(mapView)
 
-                // Creates a marker in the center of the map.
-//                let marker = GMSMarker()
-//                marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-//                marker.title = "Sydney"
-//                marker.snippet = "Australia"
-//                marker.map = mapView
-//
+//Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        
+//ピンの色変更
+//        marker.icon = GMSMarker.markerImage(with: .black)
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "メインタイトル"
+        marker.snippet = "サブタイトル"
+        marker.icon = self.imageWithImage(image: UIImage(named: "camera_1")!, scaledToSize: CGSize(width: 50.0, height: 50.0))
+        marker.tracksViewChanges = true
+        marker.map = mapView
+        
+        self.tappedMarker = GMSMarker()
+        self.customInfoWindow = CustomInfoWindow().loadView()
+        
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
         
@@ -65,6 +76,46 @@ class MainroomViewController: UIViewController, UISearchResultsUpdating {
 
         // Do any additional setup after loading the view.
     }
+    
+    //ピンの縮尺を変更する
+        func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+            UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+            image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+            let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            return newImage
+        }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+            NSLog("marker was tapped")
+            tappedMarker = marker
+
+            let position = marker.position
+            mapView.animate(toLocation: position)
+            let point = mapView.projection.point(for: position)
+            let newPoint = mapView.projection.coordinate(for: point)
+            let camera = GMSCameraUpdate.setTarget(newPoint)
+            mapView.animate(with: camera)
+
+            let opaqueWhite = UIColor(white: 1, alpha: 0.85)
+            customInfoWindow?.layer.backgroundColor = opaqueWhite.cgColor
+            customInfoWindow?.layer.cornerRadius = 8
+            customInfoWindow?.center = mapView.projection.point(for: position)
+            mapView.addSubview(customInfoWindow!)
+            return false
+         }
+        func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+            return UIView()
+        }
+        func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+            customInfoWindow?.removeFromSuperview()
+        }
+        func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+            let position = tappedMarker?.position
+            customInfoWindow?.center = mapView.projection.point(for: position!)
+            customInfoWindow?.center.y -= 140
+        }
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             // Override point for customization after application launch.

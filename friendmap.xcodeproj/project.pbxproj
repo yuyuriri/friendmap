@@ -31,6 +31,8 @@
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
 		80EBE2172A94B49F0025C102 /* UserDataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */; };
 		80EBE21B2A94C8460025C102 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */; };
+		80EBE21D2A94FE080025C102 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80EBE21C2A94FE080025C102 /* CustomInfoWindow.xib */; };
+		80EBE21F2A94FEB80025C102 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE21E2A94FEB80025C102 /* CustomInfoWindow.swift */; };
 		E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreViewController.swift; sourceTree = "<group>"; };
 		80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80EBE21C2A94FE080025C102 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
+		80EBE21E2A94FEB80025C102 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.debug.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.debug.xcconfig"; sourceTree = "<group>"; };
 		9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EB33133AAFB8FD8660D369 /* Pods-friendmap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.release.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +118,6 @@
 				80AC36EA2A2202C500864C88 /* TopmenuViewController.swift */,
 				80AC37042A30979A00864C88 /* TopmenuCollectionViewCell.swift */,
 				80509C382A752946004BA274 /* MainroomViewController.swift */,
-				80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */,
 				80AC36FC2A24277E00864C88 /* NewroomViewController.swift */,
 				800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */,
 				80AC37002A27520F00864C88 /* DetailViewController.swift */,
@@ -122,9 +125,12 @@
 				8080678E2A93A1CB002A08E9 /* SettingViewController.swift */,
 				808067902A93AEBF002A08E9 /* UpdateAccountViewController.swift */,
 				80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */,
+				80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */,
 				80AC36FE2A274C2F00864C88 /* roomdata.swift */,
 				808067922A945092002A08E9 /* UserManager.swift */,
 				80AC36EC2A2202C500864C88 /* Main.storyboard */,
+				80EBE21C2A94FE080025C102 /* CustomInfoWindow.xib */,
+				80EBE21E2A94FEB80025C102 /* CustomInfoWindow.swift */,
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
 				800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */,
 				80AC36EF2A2202CA00864C88 /* Assets.xcassets */,
@@ -218,6 +224,7 @@
 				800865AB2A39D61F00C2911A /* NewroomCollectionViewCell.xib in Resources */,
 				8080678D2A9268F7002A08E9 /* Login.storyboard in Resources */,
 				80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */,
+				80EBE21D2A94FE080025C102 /* CustomInfoWindow.xib in Resources */,
 				80AC36F02A2202CA00864C88 /* Assets.xcassets in Resources */,
 				80AC36EE2A2202C500864C88 /* Main.storyboard in Resources */,
 				80EBE21B2A94C8460025C102 /* GoogleService-Info.plist in Resources */,
@@ -294,6 +301,7 @@
 				80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */,
 				80AC36FD2A24277E00864C88 /* NewroomViewController.swift in Sources */,
 				80AC36EB2A2202C500864C88 /* TopmenuViewController.swift in Sources */,
+				80EBE21F2A94FEB80025C102 /* CustomInfoWindow.swift in Sources */,
 				80AC36FF2A274C2F00864C88 /* roomdata.swift in Sources */,
 				8080678F2A93A1CB002A08E9 /* SettingViewController.swift in Sources */,
 				808067932A945092002A08E9 /* UserManager.swift in Sources */,
