@@ -27,8 +27,10 @@ class LoginViewController: UIViewController {
 
     private func auth() {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        _ = GIDConfiguration(clientID: clientID)
+        let config = GIDConfiguration(clientID: clientID)
 
+        GIDSignIn.sharedInstance.configuration = config
+        
         //追加
         let scenes = UIApplication.shared.connectedScenes
         let windowScenes = scenes.first as? UIWindowScene

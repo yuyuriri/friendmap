@@ -10,6 +10,7 @@
 		800865AA2A39D61F00C2911A /* NewroomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */; };
 		800865AB2A39D61F00C2911A /* NewroomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */; };
 		80509C392A752946004BA274 /* MainroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80509C382A752946004BA274 /* MainroomViewController.swift */; };
+		807A35722A95A74B00C8E0CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 807A35712A95A74B00C8E0CF /* GoogleService-Info.plist */; };
 		808067892A9268B2002A08E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808067882A9268B2002A08E9 /* LoginViewController.swift */; };
 		8080678B2A9268D5002A08E9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080678A2A9268D5002A08E9 /* SignUpViewController.swift */; };
 		8080678D2A9268F7002A08E9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8080678C2A9268F7002A08E9 /* Login.storyboard */; };
@@ -30,7 +31,6 @@
 		80D4923C2A8CF53B00936E2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923B2A8CF53B00936E2D /* ResultViewController.swift */; };
 		80D4923E2A8CF9BC00936E2D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */; };
 		80EBE2172A94B49F0025C102 /* UserDataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */; };
-		80EBE21B2A94C8460025C102 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */; };
 		80EBE21D2A94FE080025C102 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80EBE21C2A94FE080025C102 /* CustomInfoWindow.xib */; };
 		80EBE21F2A94FEB80025C102 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBE21E2A94FEB80025C102 /* CustomInfoWindow.swift */; };
 		E959D16A217B3C587BC2D20C /* Pods_friendmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF08C483934D8D936FFA12E /* Pods_friendmap.framework */; };
@@ -40,6 +40,7 @@
 		800865A82A39D61F00C2911A /* NewroomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewroomCollectionViewCell.swift; sourceTree = "<group>"; };
 		800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewroomCollectionViewCell.xib; sourceTree = "<group>"; };
 		80509C382A752946004BA274 /* MainroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainroomViewController.swift; sourceTree = "<group>"; };
+		807A35712A95A74B00C8E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		808067882A9268B2002A08E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8080678A2A9268D5002A08E9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8080678C2A9268F7002A08E9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		80D4923B2A8CF53B00936E2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		80D4923D2A8CF9BC00936E2D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		80EBE2162A94B49F0025C102 /* UserDataStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreViewController.swift; sourceTree = "<group>"; };
-		80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80EBE21C2A94FE080025C102 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
 		80EBE21E2A94FEB80025C102 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		8EACD4962B92DF5ADB36A5B9 /* Pods-friendmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendmap.debug.xcconfig"; path = "Target Support Files/Pods-friendmap/Pods-friendmap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,10 +134,10 @@
 				80AC37052A30979A00864C88 /* TopmenuCollectionViewCell.xib */,
 				800865A92A39D61F00C2911A /* NewroomCollectionViewCell.xib */,
 				80AC36EF2A2202CA00864C88 /* Assets.xcassets */,
-				80EBE21A2A94C8450025C102 /* GoogleService-Info.plist */,
 				80AC36F12A2202CA00864C88 /* LaunchScreen.storyboard */,
 				808067872A92686F002A08E9 /* Login */,
 				80AC36F42A2202CA00864C88 /* Info.plist */,
+				807A35712A95A74B00C8E0CF /* GoogleService-Info.plist */,
 			);
 			path = friendmap;
 			sourceTree = "<group>";
@@ -221,13 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC36F32A2202CA00864C88 /* LaunchScreen.storyboard in Resources */,
+				807A35722A95A74B00C8E0CF /* GoogleService-Info.plist in Resources */,
 				800865AB2A39D61F00C2911A /* NewroomCollectionViewCell.xib in Resources */,
 				8080678D2A9268F7002A08E9 /* Login.storyboard in Resources */,
 				80AC37072A30979A00864C88 /* TopmenuCollectionViewCell.xib in Resources */,
 				80EBE21D2A94FE080025C102 /* CustomInfoWindow.xib in Resources */,
 				80AC36F02A2202CA00864C88 /* Assets.xcassets in Resources */,
 				80AC36EE2A2202C500864C88 /* Main.storyboard in Resources */,
-				80EBE21B2A94C8460025C102 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

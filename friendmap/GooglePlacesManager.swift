@@ -26,9 +26,9 @@ final class GooglePlacesManager {
         case failedToGetCoordinates
     }
     
-//    public func setUp() {
-//        GMSPlacesClient.provideAPIKey("AIzaSyCo8DwtL8P32qoP0b8A_EzsNsM2oNOsbjs")
-//    }
+    public func setUp() {
+        GMSPlacesClient.provideAPIKey("AIzaSyCo8DwtL8P32qoP0b8A_EzsNsM2oNOsbjs")
+    }
     
     public func findPlaces(
         query: String,
