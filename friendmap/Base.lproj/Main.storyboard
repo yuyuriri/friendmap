@@ -16,24 +16,10 @@
                     <view key="view" contentMode="scaleToFill" id="6Bb-Zq-kg6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-i7-Jih">
-                                <rect key="frame" x="16" y="165" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="戻る"/>
-                                <connections>
-                                    <action selector="back" destination="2oK-rK-tUN" eventType="touchUpInside" id="XV2-u0-sMl"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Zxz-p9-ezP"/>
                         <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="d6x-Lw-wJd"/>
-                    <connections>
-                        <outlet property="returnButton" destination="xzK-i7-Jih" id="Pms-gl-PTs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npp-YH-kPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +73,7 @@
                         <outlet property="collectionView" destination="2Fj-mA-VsX" id="0TS-P0-bjk"/>
                         <outlet property="collectionViewFlowLayout" destination="8bC-Xf-vdC" id="Pkl-9P-Oc1"/>
                         <segue destination="LzH-4s-xeY" kind="presentation" identifier="newroom" modalPresentationStyle="fullScreen" id="OK8-M3-fhf"/>
-                        <segue destination="Haz-sR-Z6m" kind="presentation" identifier="godetail" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="KMn-Ty-ZDQ"/>
+                        <segue destination="2oK-rK-tUN" kind="show" identifier="godetail" id="EtX-bZ-tQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -428,30 +414,10 @@
             </objects>
             <point key="canvasLocation" x="-518.46153846153845" y="-781.27962085308059"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="heq-cP-c6j">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Haz-sR-Z6m" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="aSc-tn-vMM"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rux-9A-u6K">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2oK-rK-tUN" kind="relationship" relationship="rootViewController" id="a4K-DY-YtL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GzQ-Dt-ZGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="263" y="-781"/>
-        </scene>
     </scenes>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>

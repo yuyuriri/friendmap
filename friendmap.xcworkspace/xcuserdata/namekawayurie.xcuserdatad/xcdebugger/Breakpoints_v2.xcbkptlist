@@ -7,70 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "friendmap/MainroomViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "updateSearchResults(for:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4 - d7b9cc99fb63163"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;friendmap.Place&gt;, Swift.Error&gt;) -&gt; () in friendmap.MainroomViewController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
-                  moduleName = "friendmap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/MainroomViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "182"
-                  endingLineNumber = "182"
-                  offsetFromSymbolStart = "324">
-               </Location>
-               <Location
-                  uuid = "ACC089A4-FD28-4682-B93B-7EC6BE8BDAD4 - b45567dc383747aa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;friendmap.Place&gt;, Swift.Error&gt;) -&gt; () in friendmap.MainroomViewController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
-                  moduleName = "friendmap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namekawayurie/Desktop/%E3%83%A6%E3%83%AA%E3%82%A8/LiT!/friendmap/friendmap/MainroomViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E110F777-BDCC-480E-BBDA-41A23F16E972"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "friendmap/MainroomViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "updateSearchResults(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "89A3923B-57F1-4403-8CD9-DAE8BD42D281"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -209,6 +145,54 @@
             startingLineNumber = "61"
             endingLineNumber = "61"
             landmarkName = "auth()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C6B16FC-04FF-41B9-A9A6-ECC994AD72F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "friendmap/GooglePlacesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "resolveLocation(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "873D4811-DDD7-48BA-9B4E-E6AE47A3885B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "friendmap/GooglePlacesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "findPlaces(query:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83D958FB-B70B-4B4F-9456-BF17E0024856"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "friendmap/GooglePlacesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "findPlaces(query:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -34,9 +34,6 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="label" destination="sjs-b6-4sO" id="UXn-BA-JUb"/>
-            </connections>
             <point key="canvasLocation" x="22.900763358778626" y="204.22535211267606"/>
         </view>
     </objects>

@@ -35,13 +35,18 @@ final class GooglePlacesManager {
         completion: @escaping(Result<[Place], Error>) -> Void
     ) {
         let filter = GMSAutocompleteFilter()
-        filter.type = .geocode
+        
         client.findAutocompletePredictions(
             fromQuery: query,
-            filter: filter,
+            filter: nil,
             sessionToken: nil
         ) { results, error in
              guard let results = results, error == nil else {
+                 print("")
+                 print("")
+                 print(error)
+                 print("")
+                 print("")
                  completion(.failure(PlacesError.failedToFind))
             return
         }
