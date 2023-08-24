@@ -41,7 +41,7 @@ class UpdateAccountViewController: UIViewController {
     @IBAction func accountUpdateButtonTapped(_ sender: UIButton){
         guard let uid = Auth.auth().currentUser?.uid else { return }
         if let accountTitle = accountField.text, !accountTitle.isEmpty {
-            //            userManager.updateAccount(displayName: accountField.text!, userID: uid)
+            userManager.updateAccount(displayName: accountField.text!, userID: uid)
             
             //元の画面に書いたcatchDataメソッドが呼ばれる、passedCounterの中身を受け渡す
             delegate?.catchData(newAccountName: accountTitle)
@@ -49,6 +49,9 @@ class UpdateAccountViewController: UIViewController {
             //元の画面に戻る処理
             dismiss(animated: true, completion: nil)
             
+            //1つ前の画面
+            let settingView = self.presentingViewController as! SettingViewController
+            settingView.AccountDisplay()
             
             //            self.dismiss(animated: true, completion: nil)
         } else {
@@ -60,38 +63,39 @@ class UpdateAccountViewController: UIViewController {
         
         guard let user = Auth.auth().currentUser else { return }
         
-        //        self.userManager.getUserDisplayName { displayName in
-        //            DispatchQueue.main.async {
-        //                self.accountField.text = displayName
-        //            }
+        self.userManager.getUserDisplayName { displayName in
+            DispatchQueue.main.async {
+                self.accountField.text = displayName
+            }
+        }
     }
+    
+    //影のスタイル
+    func addStyle(to button: UIButton!){
+        //影の濃さ
+        button.layer.shadowOpacity = 0.1
+        //ぼかしの大きさ
+        button.layer.shadowRadius = 3
+        //いろ
+        button.layer.shadowColor = UIColor.black.cgColor
+        //影の方向
+        button.layer.shadowOffset = CGSize(width: 2, height: 2)
+    }
+    
+    //他の場所タップするとキーボードが閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
 }
-
-//影のスタイル
-func addStyle(to button: UIButton!){
-    //影の濃さ
-    button.layer.shadowOpacity = 0.1
-    //ぼかしの大きさ
-    button.layer.shadowRadius = 3
-    //いろ
-    button.layer.shadowColor = UIColor.black.cgColor
-    //影の方向
-    button.layer.shadowOffset = CGSize(width: 2, height: 2)
-}
-
-//他の場所タップするとキーボードが閉じる
-//override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//    self.view.endEditing(true)
-//}
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
-
-

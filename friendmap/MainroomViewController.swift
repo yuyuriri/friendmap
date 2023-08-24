@@ -8,8 +8,20 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import FirebaseFirestore
+import FirebaseAuth
+
 
 class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResultsUpdating {
+    
+    
+    // Firestoreのデータベースを参照する
+//    let db = Firestore.firestore()
+//    var selectedTags: [String] = []
+//    var userManager = UserManager()
+//    var tagNames = [String]()
+
+
     
     var mapView: GMSMapView!
     var tappedMarker : GMSMarker?
@@ -47,10 +59,17 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         
         title = "Maps"
         
+        navigationController?.navigationBar.backgroundColor = .clear
+        searchVC.searchBar.backgroundColor = .clear
+        searchVC.searchBar.searchTextField.backgroundColor = .white
         
-        searchVC.searchBar.backgroundColor = .secondarySystemBackground
+//        searchVC.searchBar.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        
+        
         searchVC.searchResultsUpdater = self
         navigationItem.searchController = searchVC
+        
+        
         
         
         let camera = GMSCameraPosition.camera(
@@ -81,9 +100,9 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         //吹き出しのメインタイトル
         marker.title = "メインタイトル"
         //吹き出しのサブタイトル
-        marker.snippet = "サブタイトル"
+//        marker.snippet = "サブタイトル"
         //マーカーのアイコンをイメージにする
-        //        marker.icon = self.imageWithImage(image: UIImage(named: "camera_1")!, scaledToSize: CGSize(width: 50.0, height: 50.0))
+                marker.icon = self.imageWithImage(image: UIImage(named: "pinimage")!, scaledToSize: CGSize(width: 40.0, height: 40.0))
         
         marker.tracksViewChanges = true
         marker.map = mapView
@@ -105,6 +124,13 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
                 
         // MapViewにUIGestureRecognizerを追加.
         mapView.addGestureRecognizer(myLongPress)
+        
+        
+        // Firestoreからタグを取得する
+//        userManager.fetchTags { [weak self] tagNames in
+//            self?.tagNames = tagNames
+//            self?.buildForm()
+//        }
     }
     
     /*
@@ -134,6 +160,8 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         NSLog("marker was tapped")
+        
+//        showTitleInputAlert()
         tappedMarker = marker
         
         let position = marker.position
@@ -150,6 +178,22 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         mapView.addSubview(customInfoWindow!)
         return false
     }
+    
+    // アラートを表示してユーザーがタイトルを入力できるようにする
+//        func showTitleInputAlert() {
+//            let alertController = UIAlertController(title: "マーカータイトルの編集", message: nil, preferredStyle: .alert)
+//            alertController.addTextField { textField in
+//                textField.placeholder = "新しいタイトル"
+//            }
+//
+//            let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+//            let saveAction = UIAlertAction(title: "保存", style: .default) { [weak self] _ in
+//                if let textField = alertController.textFields?.first, let newTitle = textField.text {
+//                    self?.marker.title = newTitle
+//                }
+//            }
+    
+    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         return UIView()
     }
@@ -238,9 +282,9 @@ extension MainroomViewController: ResultViewControllerDelegate {
         //吹き出しのメインタイトル
         marker.title = "メインタイトル"
         //吹き出しのサブタイトル
-        marker.snippet = "サブタイトル"
+//        marker.snippet = "サブタイトル"
         //マーカーのアイコンをイメージにする
-        //        marker.icon = self.imageWithImage(image: UIImage(named: "camera_1")!, scaledToSize: CGSize(width: 50.0, height: 50.0))
+                marker.icon = self.imageWithImage(image: UIImage(named: "pinimage")!, scaledToSize: CGSize(width: 40.0, height: 40.0))
         
         marker.tracksViewChanges = true
         marker.map = mapView
@@ -264,6 +308,14 @@ extension MainroomViewController: ResultViewControllerDelegate {
         
         
     }
+    
+//    マーカーがタップされたときに呼ばれるデリゲートメソッド
+//        func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+//            showTitleInputAlert()
+//            return true
+//        }
+    
+//     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
     
     
 }

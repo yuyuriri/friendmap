@@ -16,24 +16,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-//        Auth.auth().addStateDidChangeListener { (auth, user) in
-//            if user == nil {
-//                guard let scene = (scene as? UIWindowScene) else {
-//                    return
-//                }
-//                let window = UIWindow(windowScene: scene)
-//                self.window = window
-//                window.makeKeyAndVisible()
-//
-//                let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginView") as! LoginViewController
-//                window.rootViewController = vc
-//            } else {
-//                print(user?.uid)
-//                print(user?.email)
-//                print("ログイン済み")
-//            }
-//        }
-//        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user == nil {
+                guard let scene = (scene as? UIWindowScene) else {
+                    return
+                }
+                let window = UIWindow(windowScene: scene)
+                self.window = window
+                window.makeKeyAndVisible()
+
+                let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginView") as! LoginViewController
+                window.rootViewController = vc
+            } else {
+                print(user?.uid)
+                print(user?.email)
+                print("ログイン済み")
+            }
+        }
+        
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }

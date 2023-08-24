@@ -9,10 +9,15 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import FirebaseCore
+import FirebaseFirestore
 import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+//Firestore のインスタンスを初期化
+//    let db = Firestore.firestore()
+    
 
 
 
@@ -46,6 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return GIDSignIn.sharedInstance.handle(url)
     }
+    
+    
+    
+    
 
 
 }
