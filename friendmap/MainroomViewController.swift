@@ -29,6 +29,12 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     
     var editingMarker: GMSMarker?
     var markerTextField: UITextField!
+    var contentTextView: UITextView!
+    
+    
+    
+//TextViewのhitokotoをUserDefaults保存
+//    var hitokotoSaveData: UserDefaults = UserDefaults.standard
     
     
     let searchVC = UISearchController(searchResultsController: ResultViewController())
@@ -103,7 +109,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         
         //吹き出しのメインタイトル
-        marker.title = "タイトル"
+//        marker.title = "タイトル"
         //吹き出しのサブタイトル
 //        marker.snippet = "サブタイトル"
         //マーカーのアイコンをイメージにする
@@ -114,6 +120,8 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         
         self.tappedMarker = GMSMarker()
         self.customInfoWindow = CustomInfoWindow().loadView()
+        
+        self.mapView.delegate = self
         
         view.addSubview(mapView)
         view.sendSubviewToBack(mapView)
@@ -187,6 +195,12 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         return false
     }
     
+//    キーボード閉じる
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return true
+    }
+    
 
     
 //    func showMarkerEditingView() {
@@ -214,7 +228,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        return UIView()
+        return self.customInfoWindow
     }
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         customInfoWindow?.removeFromSuperview()
@@ -278,6 +292,21 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
             }
         }
     }
+    
+//    @IBAction func savehitokoto(_ sender: Any) {
+//        hitokotoSaveData.set(contentTextView.text, forKey: "content")
+//
+//        let alert: UIAlertController = UIAlertController(title: "保存", message: "一言の保存が完了しました", preferredStyle: .alert)
+        
+//        OKボタンで自動的に前画面に戻る
+//        alert.addAction(
+//            UIAlertAction(title: "OK",
+//                          style: .default
+//                          handler: { action in
+//                          self.navigationController?.popViewController(animated: true)
+//                         })
+
+//    }
     
 }
 
