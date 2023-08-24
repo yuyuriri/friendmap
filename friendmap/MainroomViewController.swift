@@ -27,6 +27,9 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     var tappedMarker : GMSMarker?
     var customInfoWindow : CustomInfoWindow?
     
+    var editingMarker: GMSMarker?
+    var markerTextField: UITextField!
+    
     
     let searchVC = UISearchController(searchResultsController: ResultViewController())
     
@@ -58,6 +61,8 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         super.viewDidLoad()
         
         title = "Maps"
+        
+//        mapView.delegate = self
         
         navigationController?.navigationBar.backgroundColor = .clear
         searchVC.searchBar.backgroundColor = .clear
@@ -98,7 +103,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         
         //吹き出しのメインタイトル
-        marker.title = "メインタイトル"
+        marker.title = "タイトル"
         //吹き出しのサブタイトル
 //        marker.snippet = "サブタイトル"
         //マーカーのアイコンをイメージにする
@@ -161,6 +166,9 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         NSLog("marker was tapped")
         
+        editingMarker = marker
+//        showMarkerEditingView()
+        
 //        showTitleInputAlert()
         tappedMarker = marker
         
@@ -178,6 +186,17 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         mapView.addSubview(customInfoWindow!)
         return false
     }
+    
+
+    
+//    func showMarkerEditingView() {
+//            markerTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 200, height: 30))
+//            markerTextField.text = editingMarker?.title
+//            markerTextField.backgroundColor = UIColor.white
+//            markerTextField.delegate = self
+//
+//            view.addSubview(markerTextField)
+//        }
     
     // アラートを表示してユーザーがタイトルを入力できるようにする
 //        func showTitleInputAlert() {
@@ -319,3 +338,10 @@ extension MainroomViewController: ResultViewControllerDelegate {
     
     
 }
+
+//extension MainroomViewController: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        editingMarker?.title = textField.text
+//        textField.removeFromSuperview()
+//    }
+//}
