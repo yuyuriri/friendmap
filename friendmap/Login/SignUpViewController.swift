@@ -13,12 +13,20 @@ import FirebaseFirestore
 class SignUpViewController: UIViewController {
 
     @IBOutlet var nameTextField: UITextField!
+    
+    @IBOutlet var registerButton: UIButton!
+    
+    @IBOutlet var signupView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 //        view.backgroundColor = UIColor.DynamicBackGroundColor
+        
+        
     }
+    
+   
     
     @IBAction func registerButtonTapped() {
         // ユーザーが入力した名前を取得
@@ -43,6 +51,18 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+    //影のスタイル
+//    @IBAction func addStyle(to button: UIButton!){
+//        //影の濃さ
+//        button.layer.shadowOpacity = 0.1
+//        //ぼかしの大きさ
+//        button.layer.shadowRadius = 5
+//        //いろ
+//        button.layer.shadowColor = UIColor.black.cgColor
+//        //影の方向
+//        button.layer.shadowOffset = CGSize(width: 2, height: 2)
+//    }
     
     //他の場所タップするとキーボードが閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

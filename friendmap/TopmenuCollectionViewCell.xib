@@ -16,14 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-be-kM1">
-                        <rect key="frame" x="231.66666666666666" y="25" width="48.333333333333343" height="35"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
-                        <connections>
-                            <action selector="shareWithSender:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ZoY-MA-aSu"/>
-                        </connections>
-                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKW-Oa-FaS">
                         <rect key="frame" x="30" y="260" width="240" height="200"/>
                         <constraints>
@@ -53,7 +45,6 @@
             <constraints>
                 <constraint firstItem="NdZ-rz-lIH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Fq1-pL-Z79"/>
                 <constraint firstItem="9VN-hW-Vev" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="JAd-d4-5Jl"/>
-                <constraint firstAttribute="trailing" secondItem="1Qd-be-kM1" secondAttribute="trailing" constant="20" id="TW7-Oo-pCg"/>
                 <constraint firstItem="YKW-Oa-FaS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="UDI-IM-he6"/>
                 <constraint firstItem="NdZ-rz-lIH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="VJU-1M-oIc"/>
                 <constraint firstAttribute="bottom" secondItem="YKW-Oa-FaS" secondAttribute="bottom" constant="40" id="WTy-in-6X6"/>
@@ -62,7 +53,6 @@
                 <constraint firstItem="9VN-hW-Vev" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="82" id="edy-Kx-hF2"/>
                 <constraint firstItem="YKW-Oa-FaS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="kfs-zz-jd0"/>
                 <constraint firstAttribute="trailing" secondItem="NdZ-rz-lIH" secondAttribute="trailing" constant="30" id="ltC-eV-d2I"/>
-                <constraint firstItem="1Qd-be-kM1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="p9J-NA-P1B"/>
                 <constraint firstAttribute="trailing" secondItem="YKW-Oa-FaS" secondAttribute="trailing" constant="30" id="wKq-dZ-VNn"/>
             </constraints>
             <size key="customSize" width="297" height="406"/>
@@ -74,7 +64,4 @@
             <point key="canvasLocation" x="192.36641221374046" y="144.36619718309859"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-    </resources>
 </document>

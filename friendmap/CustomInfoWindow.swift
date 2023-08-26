@@ -41,6 +41,20 @@ class CustomInfoWindow: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    //cellに表示されているパーツにデータを割り振る
+    @IBAction func setupCustomInfoWindow() {
+//        dateFormatter.dateFormat = "YY/MM/dd HH:mm"
+        
+//        maintitleLabel.text = mainTitle
+//        maindateLabel.text = dateFormatter.string(from: mainDate)
+//        mainImageView.image = UIImage(data: mainImageData)
+        
+        //角丸にする
+        self.layer.cornerRadius = 60
+        self.layer.masksToBounds = true
+
+    }
 
 
 

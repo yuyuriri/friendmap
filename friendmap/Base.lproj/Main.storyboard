@@ -95,18 +95,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98D-Ke-6Pz">
-                                <rect key="frame" x="169" y="217" width="55" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="photo.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="didTouchDownopenAlbumButton" destination="LzH-4s-xeY" eventType="touchDown" id="Hgi-HE-o75"/>
-                                    <action selector="didTouchDragExitopenAlbumButton" destination="LzH-4s-xeY" eventType="touchUpInside" id="3He-vz-GjC"/>
-                                    <action selector="didTouchUpInsideopenAlbumButton" destination="LzH-4s-xeY" eventType="touchUpInside" id="K2v-nS-vgi"/>
-                                    <action selector="openAlbum" destination="LzH-4s-xeY" eventType="touchUpInside" id="tnr-PH-Fwq"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgs-Sd-NWJ">
                                 <rect key="frame" x="58" y="500" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,7 +103,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" style="compact" id="zZp-OI-gW0">
-                                <rect key="frame" x="114" y="487" width="215" height="47"/>
+                                <rect key="frame" x="112" y="487" width="215" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ルーム名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-QN-wNk">
@@ -148,26 +136,11 @@
                                 <rect key="frame" x="111" y="260" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-vQ-7fE">
-                                <rect key="frame" x="273" y="217" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="cameraActivationButtonAction:" destination="LzH-4s-xeY" eventType="touchUpInside" id="d8i-Fo-l9E"/>
-                                    <action selector="didTouchDowncameraActivationButton" destination="LzH-4s-xeY" eventType="touchDown" id="FKC-fX-eh1"/>
-                                    <action selector="didTouchDragExitcameraActivationButton" destination="LzH-4s-xeY" eventType="touchDragExit" id="JEw-VZ-jjW"/>
-                                    <action selector="didTouchUpInsidecameraActivationButton" destination="LzH-4s-xeY" eventType="touchUpInside" id="2vt-FG-BV1"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayR-7f-3i7">
-                                <rect key="frame" x="111" y="627" width="170" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bF4-s3-C2I">
-                                <rect key="frame" x="-8" y="37" width="391" height="44"/>
+                                <rect key="frame" x="-11" y="37" width="400" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92956453559999996" green="0.93314248320000004" blue="0.94509977099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <navigationItem title="新規ルーム" id="VeF-wR-NBd">
                                         <barButtonItem key="leftBarButtonItem" title="cancel" id="Des-NW-mJb">
@@ -183,7 +156,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="X7H-Yh-HO6">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="c4a-Xm-Vm8">
-                                                <rect key="frame" x="289" y="4.6666666666666679" width="86" height="35"/>
+                                                <rect key="frame" x="298" y="4.6666666666666679" width="86" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="save"/>
@@ -195,9 +168,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-vQ-7fE">
+                                <rect key="frame" x="168" y="217" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="cameraActivationButtonAction:" destination="LzH-4s-xeY" eventType="touchUpInside" id="d8i-Fo-l9E"/>
+                                    <action selector="didTouchDowncameraActivationButton" destination="LzH-4s-xeY" eventType="touchDown" id="FKC-fX-eh1"/>
+                                    <action selector="didTouchDragExitcameraActivationButton" destination="LzH-4s-xeY" eventType="touchDragExit" id="JEw-VZ-jjW"/>
+                                    <action selector="didTouchUpInsidecameraActivationButton" destination="LzH-4s-xeY" eventType="touchUpInside" id="2vt-FG-BV1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M0F-6m-f57"/>
-                        <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" systemColor="tintColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="x2r-TD-IHs"/>
@@ -207,7 +192,6 @@
                         <outlet property="imageLabel" destination="xBo-xi-5Dh" id="H2i-ON-C2q"/>
                         <outlet property="memoLabel" destination="uCn-TX-61x" id="P1b-tX-gVW"/>
                         <outlet property="memoTextField" destination="JEv-U0-kJC" id="cpb-W8-EQh"/>
-                        <outlet property="openAlbumButton" destination="98D-Ke-6Pz" id="13U-BX-mZd"/>
                         <outlet property="roomImageView" destination="Vct-hr-eJl" id="q73-5V-umJ"/>
                         <outlet property="roomLabel" destination="djw-QN-wNk" id="dX4-GA-7L7"/>
                         <outlet property="roomTextField" destination="VL6-Ux-eW4" id="ksb-dd-kDa"/>
@@ -216,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpc-5U-Ri8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="-4"/>
+            <point key="canvasLocation" x="450.76923076923077" y="-4.2654028436018958"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="K5U-Um-5af">
@@ -345,13 +329,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundimage" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-78-C7b">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-Q7-0Xx">
                                 <rect key="frame" x="112" y="621" width="166" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="サインアウト">
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signOutButtonTapped:" destination="1lA-nj-H8w" eventType="touchUpInside" id="wYj-Ge-tRL"/>
@@ -417,9 +405,9 @@
     </scenes>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
+        <image name="backgroundimage" width="519" height="1121"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
-        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
