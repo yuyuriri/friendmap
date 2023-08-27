@@ -89,6 +89,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
             zoom: 6.0)
         
         
+        
         mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         self.view.addSubview(mapView)
         
@@ -100,18 +101,12 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         
         
         
-        //Creates a marker in the center of the map.
+        //Creates a marker in the center of the map
         let marker = GMSMarker()
         
-        //ピンの色変更
-        //        marker.icon = GMSMarker.markerImage(with: .black)
+//        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         
-        //吹き出しのメインタイトル
-//        marker.title = "タイトル"
-        //吹き出しのサブタイトル
-//        marker.snippet = "サブタイトル"
         //マーカーのアイコンをイメージにする
                 marker.icon = self.imageWithImage(image: UIImage(named: "pinimage")!, scaledToSize: CGSize(width: 40.0, height: 40.0))
         
@@ -128,7 +123,6 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         
         // viewにMapViewを追加？
         //        view.addSubview(mapView)
-        // Do any additional setup after loading the view.
         
         // 長押しのUIGestureRecognizerを生成.
                 var myLongPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()

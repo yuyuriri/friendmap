@@ -23,6 +23,12 @@ class SignUpViewController: UIViewController {
 
 //        view.backgroundColor = UIColor.DynamicBackGroundColor
         
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.shadowColor = UIColor.gray.cgColor
+        registerButton.layer.shadowOpacity = 0.1
+        registerButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        registerButton.layer.shadowRadius = 3
+        
         
     }
     
