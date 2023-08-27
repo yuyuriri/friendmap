@@ -15,7 +15,7 @@ import FirebaseAuth
 class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResultsUpdating {
     
     
-    // Firestoreのデータベースを参照する
+// Firestoreのデータベースを参照
 //    let db = Firestore.firestore()
 //    var selectedTags: [String] = []
 //    var userManager = UserManager()
