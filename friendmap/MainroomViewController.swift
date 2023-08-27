@@ -31,6 +31,18 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     var markerTextField: UITextField!
     var contentTextView: UITextView!
     
+    // 現在地の座標を格納する変数
+        private var current: CLLocationCoordinate2D?
+    
+    // Locationの取得に必要なManager
+    private lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        // ViewControllerでCLLocationManagerDelegateのメソッドを利用できるように
+        manager.delegate = self
+        return manager
+        
+    }()
+    
     
     
 //TextViewのhitokotoをUserDefaults保存
@@ -40,17 +52,17 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     let searchVC = UISearchController(searchResultsController: ResultViewController())
     
     
-    //    private lazy var mapView: GMSMapView = {
-    //           // 東京を表示する緯度・経度・カメラZoom値を設定
-    //           let camera = GMSCameraPosition.camera(
-    //               withLatitude: 36.0,
-    //               longitude: 140.0,
-    //               zoom: 8.0)
-    //           let view = GMSMapView.map(withFrame: view.frame, camera: camera)
-    //           view.isMyLocationEnabled = true // コレ
-    //           return view
-    //       }()
-    
+//        private lazy var mapView: GMSMapView = {
+//               // 東京を表示する緯度・経度・カメラZoom値を設定
+//               let camera = GMSCameraPosition.camera(
+//                   withLatitude: 36.0,
+//                   longitude: 140.0,
+//                   zoom: 8.0)
+//               let view = GMSMapView.map(withFrame: view.frame, camera: camera)
+//               view.isMyLocationEnabled = true // コレ
+//               return view
+//           }()
+//
     //    let searchVC = UISearchController(searchResultsController: nil)
     
     @IBOutlet var returnButton: UIButton!
@@ -79,6 +91,9 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         
         searchVC.searchResultsUpdater = self
         navigationItem.searchController = searchVC
+        
+        // Locationを取得開始する
+                locationManager.startUpdatingLocation()
         
         
         
@@ -122,7 +137,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
         view.sendSubviewToBack(mapView)
         
         // viewにMapViewを追加？
-        //        view.addSubview(mapView)
+                view.addSubview(mapView)
         
         // 長押しのUIGestureRecognizerを生成.
                 var myLongPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
@@ -302,7 +317,7 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
 
 //    }
     
-}
+        }
 
 extension MainroomViewController: ResultViewControllerDelegate {
     func didTapPlace(with coordinates: CLLocationCoordinate2D) {
@@ -368,3 +383,12 @@ extension MainroomViewController: ResultViewControllerDelegate {
 //        textField.removeFromSuperview()
 //    }
 //}
+
+
+extension MainroomViewController: CLLocationManagerDelegate {
+    // 現在地が更新された時にはしる処理
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        current = locations.first?.coordinate
+    }
+}
+
