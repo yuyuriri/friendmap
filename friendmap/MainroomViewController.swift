@@ -74,12 +74,13 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Maps"
         
+        // ViewControllerでGMSMapViewDelegateのメソッドを利用できるように
+
 //        mapView.delegate = self
         
         navigationController?.navigationBar.backgroundColor = .clear
@@ -387,8 +388,20 @@ extension MainroomViewController: ResultViewControllerDelegate {
 
 extension MainroomViewController: CLLocationManagerDelegate {
     // 現在地が更新された時にはしる処理
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        current = locations.first?.coordinate
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        current = locations.first?.coordinate
+//    }
+    
+    // マップを長押しするとはしる処理
+       func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+           // 長押しした地点の座標
+           print(coordinate)
+           // マーカーが既にあれば取り除く
+//           mapView.clear()
+           // マーカーを立てる
+           let marker = GMSMarker(position: coordinate)
+           marker.icon = GMSMarker.markerImage(with: .red)
+           marker.map = mapView
+       }
 }
 

@@ -20,6 +20,8 @@ class CustomInfoWindow: UIView {
     
     
     @IBOutlet var contentTextView: UITextView!
+    @IBOutlet var saveButton: UIButton!
+//    @IBOutlet var customInfoWindow: CustomInfoWindow!
     
     var savehitokoto: UserDefaults = UserDefaults.standard
     
@@ -67,4 +69,8 @@ class CustomInfoWindow: UIView {
         savehitokoto.set(contentTextView.text, forKey: "content")
     }
 
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+            // セルを非表示にする
+//        customInfoWindow.isHidden = true
+        }
 }
