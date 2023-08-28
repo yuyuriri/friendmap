@@ -298,6 +298,10 @@
                                 <buttonConfiguration key="configuration" style="filled" title="変更" cornerStyle="large"/>
                                 <connections>
                                     <action selector="accountUpdateButtonTapped:" destination="j4H-5T-jhk" eventType="touchUpInside" id="qkJ-Y0-DGq"/>
+                                    <action selector="didTouchDownupdateButton" destination="j4H-5T-jhk" eventType="touchDown" id="eZy-wz-JzM"/>
+                                    <action selector="didTouchDragupdateButton" destination="j4H-5T-jhk" eventType="touchDragExit" id="ndw-tI-Ptm"/>
+                                    <action selector="didTouchUpInsideupdateButton" destination="j4H-5T-jhk" eventType="touchUpInside" id="EuY-Vc-0yy"/>
+                                    <action selector="updateButtontap" destination="j4H-5T-jhk" eventType="touchUpInside" id="JvW-WG-Jrt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="変更後のニックネームを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-59-dIi">
@@ -339,10 +343,14 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="サインアウト">
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                    <color key="baseBackgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="didTouchDownsignOutButton" destination="1lA-nj-H8w" eventType="touchDown" id="caC-Ja-1GS"/>
+                                    <action selector="didTouchDragsignOutButton" destination="1lA-nj-H8w" eventType="touchDragExit" id="pqa-Af-oQf"/>
+                                    <action selector="didTouchUpInsidesignOutButton" destination="1lA-nj-H8w" eventType="touchUpInside" id="I8P-Vx-pOf"/>
                                     <action selector="signOutButtonTapped:" destination="1lA-nj-H8w" eventType="touchUpInside" id="wYj-Ge-tRL"/>
+                                    <action selector="signOutButtontap" destination="1lA-nj-H8w" eventType="touchUpInside" id="Viu-kt-Du6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlr-yt-MCq">
@@ -378,12 +386,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XH-ch-5DS">
                                 <rect key="frame" x="112" y="687" width="166" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="アカウントを削除"/>
                                 <connections>
                                     <action selector="deleteAccountButtonTapped" destination="1lA-nj-H8w" eventType="touchUpInside" id="67u-bo-i9N"/>
+                                    <action selector="deleteButtontap" destination="1lA-nj-H8w" eventType="touchUpInside" id="79G-E6-hyF"/>
+                                    <action selector="didTouchDowndeleteButton" destination="1lA-nj-H8w" eventType="touchDown" id="WzW-FX-IhC"/>
+                                    <action selector="didTouchDragdeleteButton" destination="1lA-nj-H8w" eventType="touchDragExit" id="FBN-tK-jcA"/>
+                                    <action selector="didTouchUpInsidedeleteButton" destination="1lA-nj-H8w" eventType="touchUpInside" id="fZ1-m5-gU1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -393,6 +405,7 @@
                     <connections>
                         <outlet property="accountImage" destination="YCs-5V-dSb" id="sJm-zD-kJs"/>
                         <outlet property="accountName" destination="vlr-yt-MCq" id="8JV-9R-T1O"/>
+                        <outlet property="deleteButton" destination="7XH-ch-5DS" id="Ck4-L7-YEP"/>
                         <outlet property="signOutButton" destination="2Ux-Q7-0Xx" id="Qtm-br-J1b"/>
                         <outlet property="updateButton" destination="4p7-df-zQ9" id="jhh-Vf-3dg"/>
                         <segue destination="j4H-5T-jhk" kind="show" identifier="ToUpdateViewController" id="tVe-Na-AM4"/>

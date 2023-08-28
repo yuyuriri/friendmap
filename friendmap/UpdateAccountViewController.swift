@@ -70,6 +70,36 @@ class UpdateAccountViewController: UIViewController {
         }
     }
     
+    @IBAction func didTouchDownupdateButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.updateButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+    
+    @IBAction func didTouchDragupdateButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.updateButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+    
+    @IBAction func didTouchUpInsideupdateButton() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+            
+            self.updateButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    //     updateButtonをタップしたときに振動
+    @IBAction func updateButtontap() {
+        let feedback = UIImpactFeedbackGenerator(style: .light)
+        feedback.impactOccurred()
+    }
+    
     //影のスタイル
     func addStyle(to button: UIButton!){
         //影の濃さ

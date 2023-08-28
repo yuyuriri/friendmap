@@ -20,6 +20,7 @@ class SettingViewController: UIViewController, CatchProtocol {
     @IBOutlet var accountImage: UIImageView!
     @IBOutlet var accountName: UILabel!
     @IBOutlet var updateButton: UIButton!
+    @IBOutlet var deleteButton: UIButton!
     
     var userManager = UserManager()
   
@@ -33,11 +34,17 @@ class SettingViewController: UIViewController, CatchProtocol {
         accountImage.layer.cornerRadius = accountImage.frame.size.width / 2
         accountImage.clipsToBounds = true
         
-        signOutButton.layer.cornerRadius = 5
+        signOutButton.layer.cornerRadius = 10
         signOutButton.layer.shadowColor = UIColor.gray.cgColor
         signOutButton.layer.shadowOpacity = 0.1
         signOutButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         signOutButton.layer.shadowRadius = 3
+        
+        deleteButton.layer.cornerRadius = 10
+        deleteButton.layer.shadowColor = UIColor.gray.cgColor
+        deleteButton.layer.shadowOpacity = 0.1
+        deleteButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        deleteButton.layer.shadowRadius = 3
         // Firebase Authenticationでログインしているかどうかを確認する
         guard let user = Auth.auth().currentUser else {
             return
@@ -230,6 +237,67 @@ class SettingViewController: UIViewController, CatchProtocol {
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
         present(alert, animated: true)
+    }
+    
+    
+    @IBAction func didTouchDowndeleteButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.deleteButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+    
+    @IBAction func didTouchDragdeleteButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.deleteButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+    
+    @IBAction func didTouchUpInsidedeleteButton() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+            
+            self.deleteButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    //     deleteButtonをタップしたときに振動
+    @IBAction func deleteButtontap() {
+        let feedback = UIImpactFeedbackGenerator(style: .light)
+        feedback.impactOccurred()
+    }
+    
+    @IBAction func didTouchDownsignOutButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.signOutButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+    
+    @IBAction func didTouchDragsignOutButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.signOutButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+    
+    @IBAction func didTouchUpInsidesignOutButton() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+            
+            self.signOutButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    //     signOutButtonをタップしたときに振動
+    @IBAction func signOutButtontap() {
+        let feedback = UIImpactFeedbackGenerator(style: .light)
+        feedback.impactOccurred()
     }
 
 
