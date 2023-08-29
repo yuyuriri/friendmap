@@ -180,6 +180,18 @@
                                     <action selector="didTouchUpInsidecameraActivationButton" destination="LzH-4s-xeY" eventType="touchUpInside" id="2vt-FG-BV1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0i-lk-y71">
+                                <rect key="frame" x="243" y="217" width="55" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="photo.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTouchDownopenAlbumButton" destination="LzH-4s-xeY" eventType="touchDown" id="4LZ-yM-uwZ"/>
+                                    <action selector="didTouchDragExitopenAlbumButton" destination="LzH-4s-xeY" eventType="touchDragExit" id="Z0x-TN-Le2"/>
+                                    <action selector="didTouchUpInsideopenAlbumButton" destination="LzH-4s-xeY" eventType="touchUpInside" id="rBn-WK-r0N"/>
+                                    <action selector="openAlbum" destination="LzH-4s-xeY" eventType="touchUpInside" id="Kia-Ck-pto"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M0F-6m-f57"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,6 +204,7 @@
                         <outlet property="imageLabel" destination="xBo-xi-5Dh" id="H2i-ON-C2q"/>
                         <outlet property="memoLabel" destination="uCn-TX-61x" id="P1b-tX-gVW"/>
                         <outlet property="memoTextField" destination="JEv-U0-kJC" id="cpb-W8-EQh"/>
+                        <outlet property="openAlbumButton" destination="B0i-lk-y71" id="ADJ-14-skD"/>
                         <outlet property="roomImageView" destination="Vct-hr-eJl" id="q73-5V-umJ"/>
                         <outlet property="roomLabel" destination="djw-QN-wNk" id="dX4-GA-7L7"/>
                         <outlet property="roomTextField" destination="VL6-Ux-eW4" id="ksb-dd-kDa"/>
@@ -200,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpc-5U-Ri8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="450.76923076923077" y="-4.2654028436018958"/>
+            <point key="canvasLocation" x="314" y="-4"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="K5U-Um-5af">
@@ -333,18 +346,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundimage" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-78-C7b">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-Q7-0Xx">
-                                <rect key="frame" x="112" y="621" width="166" height="45"/>
+                                <rect key="frame" x="112" y="603" width="166" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="サインアウト">
-                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                    <color key="baseBackgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="サインアウト"/>
                                 <connections>
                                     <action selector="didTouchDownsignOutButton" destination="1lA-nj-H8w" eventType="touchDown" id="caC-Ja-1GS"/>
                                     <action selector="didTouchDragsignOutButton" destination="1lA-nj-H8w" eventType="touchDragExit" id="pqa-Af-oQf"/>
@@ -354,9 +362,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlr-yt-MCq">
-                                <rect key="frame" x="71" y="218" width="248" height="37"/>
+                                <rect key="frame" x="71" y="206" width="248" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -364,18 +372,6 @@
                                 <rect key="frame" x="148" y="98" width="95" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-df-zQ9">
-                                <rect key="frame" x="105" y="284" width="180" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="アカウント名を変更" cornerStyle="large">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="UpdateButtonTapped:" destination="1lA-nj-H8w" eventType="touchUpInside" id="bpt-lm-DxN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHB-wO-JSA">
                                 <rect key="frame" x="154" y="47" width="83" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -384,7 +380,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XH-ch-5DS">
-                                <rect key="frame" x="112" y="687" width="166" height="45"/>
+                                <rect key="frame" x="112" y="672" width="166" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
@@ -396,6 +392,23 @@
                                     <action selector="didTouchDowndeleteButton" destination="1lA-nj-H8w" eventType="touchDown" id="WzW-FX-IhC"/>
                                     <action selector="didTouchDragdeleteButton" destination="1lA-nj-H8w" eventType="touchDragExit" id="FBN-tK-jcA"/>
                                     <action selector="didTouchUpInsidedeleteButton" destination="1lA-nj-H8w" eventType="touchUpInside" id="fZ1-m5-gU1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LM9-qe-mVQ">
+                                <rect key="frame" x="71" y="251" width="248" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19032955169999999" green="0.42067763209999998" blue="0.33724582199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-df-zQ9">
+                                <rect key="frame" x="112" y="292" width="166" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="アカウント名変更" cornerStyle="large">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="UpdateButtonTapped:" destination="1lA-nj-H8w" eventType="touchUpInside" id="bpt-lm-DxN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -418,9 +431,9 @@
     </scenes>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
-        <image name="backgroundimage" width="519" height="1121"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

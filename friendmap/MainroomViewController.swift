@@ -31,6 +31,11 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
     var markerTextField: UITextField!
     var contentTextView: UITextView!
     
+    var markers: [GMSMarker] = [] // ピンを管理するための配列
+    
+    
+    
+    
     // 現在地の座標を格納する変数
         private var current: CLLocationCoordinate2D?
     
@@ -141,12 +146,15 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
                 view.addSubview(mapView)
         
         // 長押しのUIGestureRecognizerを生成.
-                var myLongPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
-        myLongPress.addTarget(self, action: Selector(("recognizeLongPress:")))
-//        myLongPress.addTarget(self, action: #selector(recognizeLongPress(_:)))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(recognizeLongPress(_:)))
+               mapView.addGestureRecognizer(longPressGesture)
+           
+//                var myLongPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
+//        myLongPress.addTarget(self, action: Selector(("recognizeLongPress:")))
+////        myLongPress.addTarget(self, action: #selector(recognizeLongPress(_:)))
                 
         // MapViewにUIGestureRecognizerを追加.
-        mapView.addGestureRecognizer(myLongPress)
+//        mapView.addGestureRecognizer(myLongPress)
         
         
         // Firestoreからタグを取得する
@@ -155,31 +163,77 @@ class MainroomViewController: UIViewController, GMSMapViewDelegate, UISearchResu
 //            self?.buildForm()
 //        }
     }
-    
+
+
     /*
        長押しを感知した際に呼ばれるメソッド.
        */
-    @objc func recognizeLongPress(sender: UILongPressGestureRecognizer) {
-        
-        // 長押しの最中に何度もピンを生成しないようにする.
-        if sender.state != UIGestureRecognizer.State.began {
-                       return
-                   }
-        
-        // 長押しした地点の座標を取得.
-//        var location = sender.location(in: mapView)
-        
-        
-    }
+    @objc func recognizeLongPress(_ sender: UILongPressGestureRecognizer) {
+            if sender.state == .began {
+                let location = sender.location(in: mapView)
+                let coordinate = mapView.projection.coordinate(for: location)
+                
+                // 既存のピンをすべて非表示にする
+                for marker in markers {
+                    marker.map = nil
+                }
+                
+                // 新しいピンを追加する
+                let newMarker = GMSMarker(position: coordinate)
+                newMarker.icon = GMSMarker.markerImage(with: .red)
+                newMarker.map = mapView
+                newMarker.icon = imageWithImage(image: UIImage(named: "pinimage")!, scaledToSize: CGSize(width: 40.0, height: 40.0))
+                
+                markers.append(newMarker) // ピンを配列に追加
+            }
+        }
     
+    func imageWithImage(image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
+            UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+            image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+            let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            return newImage
+        }
+//    @objc func recognizeLongPress(sender: UILongPressGestureRecognizer) {
+//           if sender.state == .began {
+//               let location = sender.location(in: mapView)
+//               let coordinate = mapView.projection.coordinate(for: location)
+//
+//               // マーカーが既にある場合は非表示にする
+////               if let existingMarker = editingMarker {
+////                   if existingMarker.position.latitude == coordinate.latitude &&
+////                      existingMarker.position.longitude == coordinate.longitude {
+////                       existingMarker.map = nil // マーカーを非表示にする
+////                       editingMarker = nil // 編集中マーカーをリセット
+////                       return
+////                   }
+////               }
+//
+//               // 新しいマーカーを追加する
+//               let newMarker = GMSMarker(position: coordinate)
+//               newMarker.icon = GMSMarker.markerImage(with: .red)
+//               newMarker.map = mapView
+//               newMarker.icon = self.imageWithImage(image: UIImage(named: "pinimage")!, scaledToSize: CGSize(width: 40.0, height: 40.0))
+//               editingMarker = newMarker // 新しいマーカーを編集中マーカーとして設定
+//           }
+//
+//        // 長押しの最中に何度もピンを生成しないようにする.
+////               if sender.state != UIGestureRecognizer.State.began {
+////                              return
+////                          }
+//       //長押しした地点の座標を取得.
+////        _ = sender.location(in: mapView)
+//
+//       }
     //ピンの縮尺を変更する
-    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return newImage
-    }
+//    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+//        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+//        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+//        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        return newImage
+//    }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         NSLog("marker was tapped")
@@ -367,6 +421,8 @@ extension MainroomViewController: ResultViewControllerDelegate {
         
     }
     
+    
+    
 //    マーカーがタップされたときに呼ばれるデリゲートメソッド
 //        func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
 //            showTitleInputAlert()
@@ -398,10 +454,24 @@ extension MainroomViewController: CLLocationManagerDelegate {
            print(coordinate)
            // マーカーが既にあれば取り除く
 //           mapView.clear()
+           
+           // 既存のマーカーがあれば削除
+//               if let existingMarker = editingMarker {
+//                   existingMarker.map = nil
+//                   editingMarker = nil
+//               }
+           
            // マーカーを立てる
            let marker = GMSMarker(position: coordinate)
            marker.icon = GMSMarker.markerImage(with: .red)
            marker.map = mapView
+           //マーカーのアイコンをイメージにする
+           marker.icon = self.imageWithImage(image: UIImage(named: "pinimage")!, scaledToSize: CGSize(width: 40.0, height: 40.0))
+           
+           // 保存したマーカーを編集中マーカーとして設定
+//               editingMarker = marker
+           
+          
        }
 }
 

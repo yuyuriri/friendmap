@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>現在地を表示するのに使用します</string>
-	<key>GIDClientID</key>
-	<string>547395537101-fspgcvs3aqu8a01rgl1on97tjiqsv5at.apps.googleusercontent.com</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -16,7 +12,19 @@
 				<string>com.googleusercontent.apps.547395537101-fspgcvs3aqu8a01rgl1on97tjiqsv5at</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>jp.classmethod.schemes-test</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>friendmap-app</string>
+			</array>
+		</dict>
 	</array>
+	<key>GIDClientID</key>
+	<string>547395537101-fspgcvs3aqu8a01rgl1on97tjiqsv5at.apps.googleusercontent.com</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

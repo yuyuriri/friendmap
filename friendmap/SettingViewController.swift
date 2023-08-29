@@ -266,8 +266,9 @@ class SettingViewController: UIViewController, CatchProtocol {
     
     //     deleteButtonをタップしたときに振動
     @IBAction func deleteButtontap() {
-        let feedback = UIImpactFeedbackGenerator(style: .light)
-        feedback.impactOccurred()
+        UINotificationFeedbackGenerator().notificationOccurred(.warning)
+//        let feedback = UIImpactFeedbackGenerator(style: .light)
+//        feedback.impactOccurred()
     }
     
     @IBAction func didTouchDownsignOutButton() {

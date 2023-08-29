@@ -466,7 +466,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = friendmap/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ルーム作成時に使用します。";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示する為に使用します。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示するのに使用します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -497,7 +497,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = friendmap/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ルーム作成時に使用します。";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示する為に使用します。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示するのに使用します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
